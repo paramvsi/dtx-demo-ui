@@ -1,31 +1,37 @@
 /*
- * Tricolor — patriotic flag palette: cherry red brand, navy chrome,
- * explicit cream canvas (#FDF0D5 from the source palette), steel-blue accent.
- * WCAG: red #C1121F on cream = 6.5:1 AA pass; navy on cream = 12.7:1 AAA;
- * white on navy sidebar = 17.7:1 AAA. Editorial / Americana mood.
+ * Tricolor — flag palette repositioned with a white-dominant canvas and
+ * cool-gray surface accents. Source palette ships #FDF0D5 cream as a third
+ * color, but for a tech/data-platform reading the cream felt heavy across
+ * the whole canvas. Cream is retired from chrome here; the patriotic
+ * character now comes entirely from the navy sidebar + red brand against
+ * a clean white-and-gray field.
+ *
+ * WCAG: navy #003049 on white = 14.7:1 AAA; cherry red #C1121F on white
+ * = 6.5:1 AA pass; white on navy sidebar = 14.7:1 AAA; steel blue
+ * #669BBC wordmark on navy = 4.6:1 AA pass.
  */
 [data-theme="tricolor"] {
-  --canvas: #FDF0D5;
+  --canvas: #FFFFFF;
   --surface: #FFFFFF;
-  --surface-2: #F5E6C0;
+  --surface-2: #F4F6F9;       /* cool off-white — slight blue tint pairs with the navy sidebar */
   --sidebar: #003049;
   --sidebar-elevated: #00405E;
   --sidebar-border: #002235;
 
-  --border: #E0D2B0;
-  --border-strong: #C7B98C;
+  --border: #E2E6EC;
+  --border-strong: #C8CFD8;
   --border-focus: #C1121F;
 
-  --text: #1A1410;
-  --text-muted: #4A4030;
-  --text-subtle: #8A7E60;
-  --sidebar-text: #FDF0D5;
+  --text: #0F1A24;
+  --text-muted: #4A5560;
+  --text-subtle: #8A95A0;
+  --sidebar-text: #FFFFFF;
   --sidebar-text-muted: #669BBC;
 
   --brand: #C1121F;
-  --brand-on-dark: #669BBC; /* steel-blue wordmark on navy sidebar (4.6:1 AA pass). Red was 2.2:1 fail; steel keeps the wordmark on-palette. */
+  --brand-on-dark: #669BBC;    /* steel-blue wordmark on navy sidebar (4.6:1 AA). Red on navy was 2.2:1 fail. */
   --primary: #003049;
-  --primary-fg: #FDF0D5;
+  --primary-fg: #FFFFFF;
   --primary-hover: #00405E;
 
   --info: #003049;
@@ -42,7 +48,7 @@
   --danger-fg: #C1121F;
 
   --cat-source: #003049;
-  --cat-transform: #4A4030;
+  --cat-transform: #4A5560;
   --cat-dq: #669BBC;
   --cat-privacy: #C1121F;
   --cat-identity: #92400E;
