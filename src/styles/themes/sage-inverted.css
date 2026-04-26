@@ -1,0 +1,60 @@
+/*
+ * Sage Inverted — white canvas with the deep teal-green sidebar from the
+ * "forest" inversion. Only the sidebar inverts to dark; the body stays
+ * clean white with dark text. Sage shows up as the brand wordmark on
+ * canvas (sage green), the focus ring, and the primary CTA color. On
+ * the dark sidebar, sky-mint white carries the wordmark and sidebar
+ * text — the iconic mood-board treatment.
+ *
+ * This is the Strata-pattern shape (dark sidebar, light canvas) applied
+ * to the SkillUp/Sage palette.
+ *
+ * WCAG: dark teal body text on white = 12.1:1 AAA; sage brand on white
+ * = 5.7:1 AA pass; sky-mint on dark sidebar = 13.4:1 AAA; sky-mint
+ * sidebar-muted text = 7.8:1 AA pass.
+ */
+[data-theme="sage-inverted"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F4F6F4;          /* near-white sage-tinted gray for hover wells */
+  --sidebar: #142A22;            /* deep teal-green — the "great" dark sidebar */
+  --sidebar-elevated: #1F3A2E;
+  --sidebar-border: #0A1A14;
+
+  --border: #E2E6E2;
+  --border-strong: #C0C8C2;
+  --border-focus: #4A6F58;
+
+  --text: #1F3A2E;               /* dark teal body text on white — high readability */
+  --text-muted: #4A6354;
+  --text-subtle: #7B9684;
+  --sidebar-text: #ECF2EE;       /* sky-mint text on dark sidebar — iconic look */
+  --sidebar-text-muted: #B5C9BC;
+
+  --brand: #4A6F58;              /* sage wordmark on white canvas (5.7:1 AA) */
+  --brand-on-dark: #ECF2EE;      /* sky-mint wordmark on dark sidebar (13.4:1 AAA) */
+  --primary: #4A6F58;            /* sage primary CTA */
+  --primary-fg: #FFFFFF;
+  --primary-hover: #3A5A47;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #4A6F58;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92580E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #B91C1C;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #2563EB;
+  --cat-transform: #4A6354;
+  --cat-dq: #4A6F58;
+  --cat-privacy: #7C3AED;
+  --cat-identity: #A855F7;
+  --cat-routing: #92580E;
+  --cat-sink: #15803D;
+}

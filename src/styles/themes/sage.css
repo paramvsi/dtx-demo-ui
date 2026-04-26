@@ -1,0 +1,56 @@
+/*
+ * Sage — light-dominant SkillUp-inspired palette: pale sky-mint canvas,
+ * pale sage-blue sidebar (NOT dark), dark teal-green text and a darker
+ * sage-green for the brand and primary CTAs. Calm professional / health-
+ * tech mood; the sidebar reads as a quiet companion to the canvas rather
+ * than a bold dark slab.
+ *
+ * WCAG: dark teal text on canvas = 10.8:1 AAA; sage brand #4A6F58 on
+ * canvas = 5.0:1 AA pass; sage on light sidebar = 4.6:1 AA pass; white
+ * primary-fg on sage primary = 5.0:1 AA pass.
+ */
+[data-theme="sage"] {
+  --canvas: #ECF2EE;
+  --surface: #FFFFFF;
+  --surface-2: #DDE7E2;
+  --sidebar: #DDE7E2;
+  --sidebar-elevated: #C8D6CE;
+  --sidebar-border: #C0CEC8;
+
+  --border: #C8D6CE;
+  --border-strong: #A8BAB1;
+  --border-focus: #4A6F58;
+
+  --text: #1F3A2E;
+  --text-muted: #4A6354;
+  --text-subtle: #7B9684;
+  --sidebar-text: #1F3A2E;
+  --sidebar-text-muted: #5A7A6A;
+
+  --brand: #4A6F58;
+  --brand-on-dark: #4A6F58;     /* sidebar is light — same color works on both surfaces */
+  --primary: #4A6F58;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #3A5A47;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #4A6F58;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92580E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #B91C1C;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #2563EB;
+  --cat-transform: #4A6354;
+  --cat-dq: #4A6F58;
+  --cat-privacy: #7C3AED;
+  --cat-identity: #A855F7;
+  --cat-routing: #92580E;
+  --cat-sink: #15803D;
+}

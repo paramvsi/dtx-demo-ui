@@ -1,0 +1,58 @@
+/*
+ * Boomi — sampled from boomi.com's footer/sidebar treatment.
+ *
+ * Deep-navy sidebar (#0E2347, the actual Boomi footer color), bright
+ * periwinkle indigo (#5B5FE5) as the brand and primary CTA — that's the
+ * exact button color from the "Get eBook" CTA and the hero banner stripe.
+ * White canvas with cool grays for the body. The tiny coral accent
+ * (#FF5252, like the dot over the "i" in the boomi logo) is reserved
+ * for the danger token so it shows up tastefully.
+ *
+ * WCAG: indigo #5B5FE5 on white = 5.0:1 AA pass; white on navy sidebar
+ * = 15.6:1 AAA; white on indigo CTA = 5.0:1 AA pass.
+ */
+[data-theme="boomi"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F4F5F8;          /* cool gray with very faint indigo tint */
+  --sidebar: #0E2347;            /* Boomi deep navy */
+  --sidebar-elevated: #1A2F4D;   /* slightly lifted — active item row, like the Compliance hover */
+  --sidebar-border: #061833;
+
+  --border: #E2E5EC;
+  --border-strong: #C0C6D2;
+  --border-focus: #5B5FE5;
+
+  --text: #0E2347;               /* body text uses the navy itself — strong brand thread (15.6:1 AAA on white) */
+  --text-muted: #4A5568;
+  --text-subtle: #94A3B8;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #94A3B8;
+
+  --brand: #5B5FE5;              /* periwinkle indigo wordmark on white canvas (5.0:1 AA) */
+  --brand-on-dark: #FFFFFF;      /* white wordmark on navy sidebar — matches Boomi's actual treatment */
+  --primary: #5B5FE5;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #4A4ED4;
+
+  --info: #5B5FE5;
+  --info-wash: #E5E5FB;
+  --info-fg: #4A4ED4;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92580E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #FF5252;             /* coral accent — same family as the boomi-logo dot, reserved for danger */
+  --danger-wash: #FEE2E2;
+  --danger-fg: #B91C1C;
+
+  --cat-source: #5B5FE5;
+  --cat-transform: #4A5568;
+  --cat-dq: #0E2347;
+  --cat-privacy: #7C3AED;
+  --cat-identity: #FF5252;
+  --cat-routing: #92580E;
+  --cat-sink: #15803D;
+}

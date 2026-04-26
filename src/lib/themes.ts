@@ -21,6 +21,20 @@
  *   - --brand-on-dark holds the iconic mood-board color for use on dark sidebars
  */
 export const THEMES = [
+  // ── Newest themes (top of dropdown) ──────────────────────────────────────
+  {
+    id: 'sage-inverted',
+    name: 'Sage Inverted',
+    description: 'White canvas with deep teal-green sidebar. Sage as brand + primary accent.',
+    swatches: ['#FFFFFF', '#142A22', '#4A6F58', '#4A6F58', '#15803D'],
+  },
+  {
+    id: 'boomi',
+    name: 'Boomi',
+    description: 'Boomi.com palette: deep navy sidebar, periwinkle indigo brand + CTAs, white canvas.',
+    swatches: ['#FFFFFF', '#0E2347', '#5B5FE5', '#5B5FE5', '#15803D'],
+  },
+
   // ── Palette-image themes (third batch) ────────────────────────────────────
   {
     id: 'xanthous',
@@ -63,6 +77,12 @@ export const THEMES = [
     name: 'Audi',
     description: 'Premium auto: Audi red on near-black + metallic silver surfaces.',
     swatches: ['#F5F5F5', '#1A1A1A', '#BB0A30', '#1A1A1A', '#15803D'],
+  },
+  {
+    id: 'sage',
+    name: 'Sage',
+    description: 'Pale sky-mint canvas with sage-green primary. Calm professional / health-tech.',
+    swatches: ['#ECF2EE', '#DDE7E2', '#4A6F58', '#4A6F58', '#15803D'],
   },
   {
     id: 'juniper',
