@@ -1,0 +1,49 @@
+/*
+ * Phosphor — terminal / observability territory.
+ * Near-black sidebar, electric phosphor-green brand, warm off-white canvas.
+ * High contrast, single bold accent, evokes CRT phosphor glow.
+ */
+[data-theme="phosphor"] {
+  --canvas: #FAFAF9;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F5;
+  --sidebar: #09090B;
+  --sidebar-elevated: #18181B;
+  --sidebar-border: #18181B;
+
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --border-focus: #22C55E;
+
+  --text: #0A0A0A;
+  --text-muted: #52525B;
+  --text-subtle: #A1A1AA;
+  --sidebar-text: #FAFAF9;
+  --sidebar-text-muted: #71717A;
+
+  --brand: #22C55E;
+  --primary: #09090B;
+  --primary-fg: #FAFAF9;
+  --primary-hover: #18181B;
+
+  --info: #06B6D4;
+  --info-wash: #CFFAFE;
+  --info-fg: #155E75;
+  --success: #22C55E;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #EAB308;
+  --warning-wash: #FEF9C3;
+  --warning-fg: #854D0E;
+  --danger: #EF4444;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #06B6D4;
+  --cat-transform: #71717A;
+  --cat-dq: #14B8A6;
+  --cat-privacy: #A855F7;
+  --cat-identity: #EC4899;
+  --cat-routing: #EAB308;
+  --cat-sink: #22C55E;
+}

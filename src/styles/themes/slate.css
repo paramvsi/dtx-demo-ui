@@ -1,0 +1,48 @@
+/*
+ * Slate — modern slate grays with a single blue accent.
+ * Linear / Vercel territory. Brand collapses with primary intentionally.
+ */
+[data-theme="slate"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F8FAFC;
+  --sidebar: #0F172A;
+  --sidebar-elevated: #1E293B;
+  --sidebar-border: #1E293B;
+
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --border-focus: #2563EB;
+
+  --text: #0F172A;
+  --text-muted: #64748B;
+  --text-subtle: #94A3B8;
+  --sidebar-text: #F8FAFC;
+  --sidebar-text-muted: #94A3B8;
+
+  --brand: #2563EB;
+  --primary: #0F172A;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #1E293B;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #16A34A;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #F59E0B;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #92400E;
+  --danger: #DC2626;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #2563EB;
+  --cat-transform: #64748B;
+  --cat-dq: #14B8A6;
+  --cat-privacy: #A855F7;
+  --cat-identity: #EC4899;
+  --cat-routing: #F59E0B;
+  --cat-sink: #16A34A;
+}

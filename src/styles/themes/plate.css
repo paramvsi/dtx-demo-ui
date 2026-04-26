@@ -1,0 +1,49 @@
+/*
+ * Plate — editorial / printed plate territory.
+ * Warm porcelain canvas, dark zinc sidebar, muted bronze brand. Magazine-like.
+ * Softer chromatics, lower contrast than Strata/Slate, intentional warmth.
+ */
+[data-theme="plate"] {
+  --canvas: #FAFAF7;
+  --surface: #FFFFFF;
+  --surface-2: #F5F5F1;
+  --sidebar: #3F3F46;
+  --sidebar-elevated: #52525B;
+  --sidebar-border: #52525B;
+
+  --border: #E7E5E4;
+  --border-strong: #D6D3D1;
+  --border-focus: #B45309;
+
+  --text: #1C1917;
+  --text-muted: #57534E;
+  --text-subtle: #A8A29E;
+  --sidebar-text: #FAFAF7;
+  --sidebar-text-muted: #A1A1AA;
+
+  --brand: #B45309;
+  --primary: #3F3F46;
+  --primary-fg: #FAFAF7;
+  --primary-hover: #52525B;
+
+  --info: #0369A1;
+  --info-wash: #E0F2FE;
+  --info-fg: #075985;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #14532D;
+  --warning: #B45309;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #B91C1C;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #7F1D1D;
+
+  --cat-source: #0369A1;
+  --cat-transform: #78716C;
+  --cat-dq: #0F766E;
+  --cat-privacy: #7E22CE;
+  --cat-identity: #BE185D;
+  --cat-routing: #B45309;
+  --cat-sink: #15803D;
+}

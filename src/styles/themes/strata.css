@@ -1,0 +1,50 @@
+/*
+ * Strata — the default theme.
+ * Deep navy-teal sidebar, soft gray canvas, orange brand identity (wordmark only).
+ * Databricks territory.
+ */
+:root,
+[data-theme="strata"] {
+  --canvas: #F5F5F5;
+  --surface: #FFFFFF;
+  --surface-2: #F3F4F6;
+  --sidebar: #0E2A3A;
+  --sidebar-elevated: #1B3A4B;
+  --sidebar-border: #1B3A4B;
+
+  --border: #E5E7EB;
+  --border-strong: #D1D5DB;
+  --border-focus: #2563EB;
+
+  --text: #111827;
+  --text-muted: #6B7280;
+  --text-subtle: #9CA3AF;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #94A3B8;
+
+  --brand: #FF3621;        /* WORDMARK ONLY */
+  --primary: #0E2A3A;      /* same as sidebar — the unified-brand move */
+  --primary-fg: #FFFFFF;
+  --primary-hover: #1B3A4B;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #16A34A;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #F59E0B;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #92400E;
+  --danger: #DC2626;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #2563EB;
+  --cat-transform: #6B7280;
+  --cat-dq: #14B8A6;
+  --cat-privacy: #A855F7;
+  --cat-identity: #EC4899;
+  --cat-routing: #F59E0B;
+  --cat-sink: #16A34A;
+}

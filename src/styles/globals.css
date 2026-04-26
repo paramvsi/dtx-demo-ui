@@ -1,0 +1,189 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+ * Tailwind v4 @theme block — declares the contract.
+ * Token NAMES are fixed across the entire codebase.
+ * Token VALUES come from the active theme file (data-theme attribute).
+ *
+ * Components must reference these via Tailwind utility classes:
+ *   bg-canvas, bg-surface, text-text, border-border, bg-primary text-primary-fg, etc.
+ *
+ * Components must NEVER reference raw Tailwind colors (bg-blue-500, text-slate-700).
+ * The ESLint rule + this comment is what protects the theme switcher from regressing.
+ */
+
+@theme {
+  --font-sans: "Geist", "Geist Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+
+  /* Surfaces */
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-elevated: var(--sidebar-elevated);
+  --color-sidebar-border: var(--sidebar-border);
+
+  /* Borders */
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-border-focus: var(--border-focus);
+
+  /* Text */
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+  --color-sidebar-text: var(--sidebar-text);
+  --color-sidebar-text-muted: var(--sidebar-text-muted);
+
+  /* Brand */
+  --color-brand: var(--brand);
+
+  /* Functional */
+  --color-primary: var(--primary);
+  --color-primary-fg: var(--primary-fg);
+  --color-primary-hover: var(--primary-hover);
+  --color-info: var(--info);
+  --color-info-wash: var(--info-wash);
+  --color-info-fg: var(--info-fg);
+  --color-success: var(--success);
+  --color-success-wash: var(--success-wash);
+  --color-success-fg: var(--success-fg);
+  --color-warning: var(--warning);
+  --color-warning-wash: var(--warning-wash);
+  --color-warning-fg: var(--warning-fg);
+  --color-danger: var(--danger);
+  --color-danger-wash: var(--danger-wash);
+  --color-danger-fg: var(--danger-fg);
+
+  /* Categorical (operator types — used for canvas left-borders & palette tiles) */
+  --color-cat-source: var(--cat-source);
+  --color-cat-transform: var(--cat-transform);
+  --color-cat-dq: var(--cat-dq);
+  --color-cat-privacy: var(--cat-privacy);
+  --color-cat-identity: var(--cat-identity);
+  --color-cat-routing: var(--cat-routing);
+  --color-cat-sink: var(--cat-sink);
+}
+
+/* Default theme = Strata. Other themes activate via [data-theme="..."] on <html>. */
+@import "./themes/strata.css";
+@import "./themes/slate.css";
+@import "./themes/phosphor.css";
+@import "./themes/plate.css";
+
+/*
+ * Global color transition — the only place a wildcard selector is acceptable.
+ * Without this, palette switches feel like reloads. Don't change to `transition: all`
+ * because that pulls in transforms and breaks framer-motion's spring animations.
+ */
+body,
+body * {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    fill 180ms ease,
+    stroke 180ms ease;
+}
+
+/* Suppress transitions on first paint so the page doesn't fade in. */
+.no-transitions,
+.no-transitions * {
+  transition: none !important;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Native smooth scroll for programmatic scrollTo / anchor jumps / arrow-key list nav.
+   Wheel scrolling stays native — users expect that. */
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-canvas);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* XYFlow needs its base styles imported separately */
+@import "@xyflow/react/dist/style.css";
+
+/* Animated edge dash flow */
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.edge-flowing {
+  stroke-dasharray: 6 4;
+  animation: dash-flow 1s linear infinite;
+}
+
+/* Canvas dot grid background — bound to --color-border so theme switch updates it */
+.canvas-grid {
+  background-color: var(--color-canvas);
+  background-image: radial-gradient(circle at 1px 1px, var(--color-border) 0.7px, transparent 0.7px);
+  background-size: 18px 18px;
+}
+
+/* Theme-tinted radial overlay — picks up primary color at very low alpha,
+   fades from center to corners. Gives the canvas a "lit working surface" feel
+   that adapts to whichever theme is active. */
+.canvas-tint {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 80% 70% at 50% 30%,
+    color-mix(in srgb, var(--color-primary) 5%, transparent) 0%,
+    color-mix(in srgb, var(--color-primary) 2%, transparent) 40%,
+    transparent 75%
+  );
+}
+
+/* Subtle vignette at viewport corners — anchors the canvas as a workspace */
+.canvas-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    color-mix(in srgb, var(--color-text) 5%, transparent) 100%
+  );
+}
+
+/* Theme-tinted shadow utility — drops a soft shadow tinted with the primary
+   color. Use on canvas-resident panels (toolbar, palette, drawer) to make
+   chrome read as part of the theme rather than chrome-on-top. */
+.shadow-tinted {
+  box-shadow:
+    0 1px 2px color-mix(in srgb, var(--color-primary) 8%, transparent),
+    0 8px 24px -12px color-mix(in srgb, var(--color-primary) 18%, transparent);
+}
+
+.shadow-tinted-lg {
+  box-shadow:
+    0 2px 4px color-mix(in srgb, var(--color-primary) 10%, transparent),
+    0 16px 48px -16px color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+/* Mono numerals where needed */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

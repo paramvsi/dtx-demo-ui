@@ -1,0 +1,350 @@
+/**
+ * 8-operator catalog — port of Epic1-VisualCanvasBuilder.html.
+ * Field defaults are flavored for the UAE Telco demo (`emiratesnet-prod` tenant).
+ *
+ * To add a new operator:
+ *   1. Add it here (id is the canonical reference; `cat-{category}` token drives color).
+ *   2. The Designer canvas auto-renders it via the corresponding NodeType component.
+ *   3. The Inspector form generates from `fields[]` via react-hook-form + zod.
+ */
+import type { Operator } from '@/lib/types';
+
+export const OPERATORS: readonly Operator[] = [
+  {
+    id: 'SRC-01',
+    name: 'Kafka',
+    category: 'source',
+    subtitle: 'streaming ingest',
+    tags: ['streaming', 'ingest', 'kafka'],
+    inSchema: '—',
+    outSchema: 'topic record',
+    fields: [
+      {
+        name: 'topic',
+        label: 'Topic',
+        type: 'text',
+        required: true,
+        mono: true,
+        default: 'cdr.voice.dxb.raw',
+        hint: 'Kafka topic to consume',
+      },
+      {
+        name: 'bootstrap',
+        label: 'Bootstrap servers',
+        type: 'text',
+        required: true,
+        mono: true,
+        default: 'kafka-broker-01.dxb.emiratesnet.ae:9092',
+      },
+      {
+        name: 'group_id',
+        label: 'Consumer group',
+        type: 'text',
+        required: true,
+        mono: true,
+        default: 'dtx-cdr-voice-resolver',
+      },
+      {
+        name: 'schema_ref',
+        label: 'Schema',
+        type: 'select',
+        required: true,
+        options: ['cdr_voice_v2', 'crm_customer_v4', 'billing_v1'],
+        default: 'cdr_voice_v2',
+      },
+      {
+        name: 'start_from',
+        label: 'Start from',
+        type: 'segmented',
+        options: ['Latest', 'Earliest', 'Timestamp'],
+        default: 'Latest',
+        group: 'advanced',
+      },
+      {
+        name: 'batch_size',
+        label: 'Batch size',
+        type: 'number',
+        default: 500,
+        group: 'advanced',
+      },
+    ],
+  },
+  {
+    id: 'SRC-02',
+    name: 'JDBC',
+    category: 'source',
+    subtitle: 'database pull',
+    tags: ['batch', 'database', 'jdbc', 'bss', 'crm'],
+    inSchema: '—',
+    outSchema: 'row record',
+    fields: [
+      {
+        name: 'connection',
+        label: 'Connection',
+        type: 'select',
+        required: true,
+        options: ['bss-prod-auh', 'crm-prod-dxb', 'billing-mart-shj'],
+        default: 'bss-prod-auh',
+      },
+      {
+        name: 'query',
+        label: 'Query',
+        type: 'textarea',
+        required: true,
+        mono: true,
+        default: 'SELECT subscriber_id, msisdn, plan, activation_emirate\nFROM bss.subscribers\nWHERE updated_at > :watermark',
+        placeholder: 'SQL with :watermark binding…',
+      },
+      {
+        name: 'schedule',
+        label: 'Schedule',
+        type: 'text',
+        mono: true,
+        default: '0 */15 * * * *',
+        hint: 'Cron — UTC',
+        group: 'advanced',
+      },
+      {
+        name: 'schema_ref',
+        label: 'Schema',
+        type: 'select',
+        options: ['bss_subscriber_v2', 'crm_customer_v4', 'billing_v1'],
+        default: 'bss_subscriber_v2',
+      },
+    ],
+  },
+  {
+    id: 'DQ-01',
+    name: 'Schema validator',
+    category: 'dq',
+    subtitle: 'reject malformed',
+    tags: ['validation', 'schema', 'quality'],
+    inSchema: 'record',
+    outSchema: 'record (validated)',
+    fields: [
+      {
+        name: 'schema_ref',
+        label: 'Schema',
+        type: 'select',
+        required: true,
+        options: ['cdr_voice_v2', 'crm_customer_v4', 'billing_v1'],
+        default: 'cdr_voice_v2',
+      },
+      {
+        name: 'mode',
+        label: 'Mode',
+        type: 'segmented',
+        options: ['Strict', 'Lenient'],
+        default: 'Strict',
+      },
+      {
+        name: 'on_failure',
+        label: 'On failure',
+        type: 'select',
+        options: ['Drop', 'Route to DLQ', 'Annotate and continue'],
+        default: 'Route to DLQ',
+        group: 'advanced',
+      },
+    ],
+  },
+  {
+    id: 'TR-01',
+    name: 'Transform',
+    category: 'transform',
+    subtitle: 'rename, normalize',
+    tags: ['transform', 'map', 'normalize', 'e164'],
+    inSchema: 'record',
+    outSchema: 'record (reshaped)',
+    fields: [
+      {
+        name: 'mappings',
+        label: 'Mappings',
+        type: 'textarea',
+        required: true,
+        mono: true,
+        default: '{\n  "msisdn": "msisdn_hashed",\n  "called_no": "called_number_hashed",\n  "duration": "duration_s"\n}',
+        placeholder: 'JSON mapping object',
+      },
+      {
+        name: 'normalize_phone',
+        label: 'Normalize phone numbers',
+        type: 'toggle',
+        default: true,
+        hint: 'E.164 / UAE +971',
+      },
+      {
+        name: 'hash_algo',
+        label: 'PII hash',
+        type: 'select',
+        options: ['None', 'SHA-256', 'SHA-512'],
+        default: 'SHA-256',
+        group: 'advanced',
+      },
+    ],
+  },
+  {
+    id: 'PV-02',
+    name: 'Consent gate',
+    category: 'privacy',
+    subtitle: 'purpose check',
+    tags: ['privacy', 'consent', 'pii', 'tra', 'gdpr'],
+    inSchema: 'record',
+    outSchema: 'record (consented)',
+    fields: [
+      {
+        name: 'required_purposes',
+        label: 'Required purposes',
+        type: 'textarea',
+        required: true,
+        mono: true,
+        default: 'analytics, ai_processing, fraud_detection',
+        hint: 'Comma-separated. TRA-registered purposes only.',
+      },
+      {
+        name: 'enforcement',
+        label: 'Enforcement',
+        type: 'segmented',
+        options: ['Block', 'Log only'],
+        default: 'Block',
+      },
+      {
+        name: 'emit_audit',
+        label: 'Emit TRA audit event',
+        type: 'toggle',
+        default: true,
+        group: 'advanced',
+      },
+    ],
+  },
+  {
+    id: 'ID-01',
+    name: 'Identity resolver',
+    category: 'identity',
+    subtitle: 'assign DTX_ID',
+    tags: ['identity', 'dtx_id', 'resolve', 'pii'],
+    inSchema: 'record',
+    outSchema: 'record + DTX_ID',
+    wide: true,
+    fields: [
+      {
+        name: 'identifier_field',
+        label: 'Identifier field',
+        type: 'text',
+        required: true,
+        mono: true,
+        default: 'msisdn_hashed',
+      },
+      {
+        name: 'strategy',
+        label: 'Resolution strategy',
+        type: 'segmented',
+        options: ['Deterministic', 'Hybrid'],
+        default: 'Deterministic',
+      },
+      {
+        name: 'threshold',
+        label: 'Confidence threshold',
+        type: 'number',
+        default: 0.85,
+        hint: '0.0 – 1.0',
+      },
+      {
+        name: 'schema_ref',
+        label: 'Identity graph',
+        type: 'select',
+        required: true,
+        options: ['graph_production', 'graph_staging'],
+        default: 'graph_production',
+      },
+      {
+        name: 'persist',
+        label: 'Persist to graph',
+        type: 'toggle',
+        default: true,
+        group: 'advanced',
+      },
+    ],
+  },
+  {
+    id: 'RT-02',
+    name: 'Error router',
+    category: 'routing',
+    subtitle: 'route failures',
+    tags: ['routing', 'dlq', 'error'],
+    inSchema: 'record',
+    outSchema: 'record (success) | record (dlq)',
+    multiInput: true,
+    fields: [
+      {
+        name: 'condition',
+        label: 'Routing condition',
+        type: 'select',
+        required: true,
+        options: ['Has error flag', 'Schema invalid', 'Consent missing', 'Any'],
+        default: 'Has error flag',
+      },
+      {
+        name: 'dlq_topic',
+        label: 'DLQ topic',
+        type: 'text',
+        required: true,
+        mono: true,
+        default: 'cdr.voice.dxb.dlq',
+      },
+    ],
+  },
+  {
+    id: 'SNK-01',
+    name: 'Kafka sink',
+    category: 'sink',
+    subtitle: 'downstream emit',
+    tags: ['sink', 'kafka', 'emit'],
+    inSchema: 'record',
+    outSchema: '—',
+    fields: [
+      {
+        name: 'topic',
+        label: 'Topic',
+        type: 'text',
+        required: true,
+        mono: true,
+        default: 'cdr.voice.dxb.identity_resolved',
+      },
+      {
+        name: 'format',
+        label: 'Format',
+        type: 'segmented',
+        options: ['Avro', 'JSON', 'Protobuf'],
+        default: 'Avro',
+      },
+      {
+        name: 'compression',
+        label: 'Compression',
+        type: 'select',
+        options: ['None', 'gzip', 'snappy', 'zstd'],
+        default: 'snappy',
+        group: 'advanced',
+      },
+      {
+        name: 'schema_ref',
+        label: 'Schema',
+        type: 'select',
+        required: true,
+        options: ['identity_resolved_v1', 'cdr_enriched_v1'],
+        default: 'identity_resolved_v1',
+      },
+    ],
+  },
+];
+
+export function getOperator(id: string): Operator | undefined {
+  return OPERATORS.find((op) => op.id === id);
+}
+
+export const OPERATORS_BY_CATEGORY: Record<string, Operator[]> = OPERATORS.reduce(
+  (acc, op) => {
+    (acc[op.category] ??= []).push(op);
+    return acc;
+  },
+  {} as Record<string, Operator[]>,
+);
