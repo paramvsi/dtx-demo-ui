@@ -40,9 +40,9 @@
   --ai-signal: #00B886;
   --ai-glow: color-mix(in srgb, #00B886 32%, transparent);
 
-  --grad-from: #00D9A0;
+  --grad-from: #052013;
   --grad-via: #8B5CF6;
-  --grad-to: #052013;
+  --grad-to: #00D9A0;
 
   --info: #8B5CF6;
   --info-wash: color-mix(in srgb, #8B5CF6 14%, transparent);

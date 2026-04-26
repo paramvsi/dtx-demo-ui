@@ -36,8 +36,8 @@ export function Segmented<T extends string>({
               'rounded font-medium transition-colors',
               size === 'sm' ? 'px-2.5 py-1 text-xs' : 'px-3 py-1.5 text-sm',
               isActive
-                // Active = brand-accent-2 wash + accent-tinted text — matches sidebar active treatment
-                ? 'bg-[color-mix(in_srgb,var(--color-brand-accent-2)_18%,transparent)] text-text shadow-xs'
+                // Active = gradient-end accent wash — matches Sidebar + FilterBar active treatment across the app
+                ? 'bg-[color-mix(in_srgb,var(--color-grad-to)_24%,transparent)] text-text shadow-xs'
                 // Hover (not selected) = soft primary wash — matches Tabs/dropdown hover language
                 : 'text-text-muted hover:bg-primary-soft hover:text-primary',
             )}

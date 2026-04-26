@@ -9,10 +9,10 @@ export type Region = 'all' | 'DXB' | 'AUH' | 'SHJ' | 'NORTH';
 export type Segment = 'all' | 'postpaid' | 'prepaid' | 'enterprise' | 'iot';
 
 /** Shared "active filter" treatment — matches sidebar active and Segmented active.
-   Using brand-accent-2 wash + accent border so the entire app speaks the same language
-   for "user has selected this." */
+   Uses the gradient-end accent (coral on Strata, hot pink on Electric Violet, etc.)
+   so every selected control speaks the same theme-secondary language across the app. */
 const ACTIVE_FILTER_CLASS =
-  'border-[color-mix(in_srgb,var(--color-brand-accent-2)_45%,var(--color-border))] bg-[color-mix(in_srgb,var(--color-brand-accent-2)_12%,transparent)] text-text font-medium';
+  'border-[color-mix(in_srgb,var(--color-grad-to)_55%,var(--color-border))] bg-[color-mix(in_srgb,var(--color-grad-to)_22%,transparent)] text-text font-medium';
 
 interface FilterBarProps {
   range: TimeRange;

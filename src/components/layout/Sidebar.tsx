@@ -84,10 +84,10 @@ function SidebarLink({
           'group relative flex items-center gap-3 rounded-md px-2.5 py-2 text-sm font-medium transition-colors',
           collapsed && 'justify-center px-0 h-10 w-10 mx-auto',
           isActive
-            // Active: theme-accent wash, full white text, slightly heavier
-            ? 'bg-[color-mix(in_srgb,var(--color-brand-accent-2)_22%,transparent)] text-sidebar-text font-semibold'
-            // Inactive: white at 80% opacity reads brighter than per-theme muted gray on every theme
-            : 'text-sidebar-text/80 hover:bg-[color-mix(in_srgb,var(--color-brand-accent-2)_12%,transparent)] hover:text-sidebar-text',
+            // Active: gradient-end accent wash (the second prominent theme color — coral on Strata, hot pink on Electric Violet, champagne on Burgundy, etc.)
+            ? 'bg-[color-mix(in_srgb,var(--color-grad-to)_35%,transparent)] text-sidebar-text font-semibold'
+            // Inactive: white at 80% opacity, with hover preview of the same accent wash
+            : 'text-sidebar-text/80 hover:bg-[color-mix(in_srgb,var(--color-grad-to)_16%,transparent)] hover:text-sidebar-text',
         )
       }
       aria-current={undefined /* let NavLink set it via render prop fn below */}
@@ -97,7 +97,8 @@ function SidebarLink({
           {isActive && (
             <motion.span
               layoutId="sidebar-active-bar"
-              className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r bg-brand-accent-2"
+              className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r"
+              style={{ backgroundColor: 'var(--color-grad-to)' }}
               transition={SPRING.default}
             />
           )}
