@@ -1,9 +1,9 @@
 import type { LucideIcon } from 'lucide-react';
 import {
   Activity,
-  BarChart3,
   Database,
   GitBranch,
+  Home as HomeIcon,
   Layers,
   KeyRound,
   Network,
@@ -29,6 +29,14 @@ export interface NavGroup {
 
 export const NAV_GROUPS: NavGroup[] = [
   {
+    id: 'overview',
+    label: 'Overview',
+    items: [
+      { label: 'Home', to: '/dashboard', icon: HomeIcon },
+      { label: 'Pipeline events', to: '/observability', icon: Activity },
+    ],
+  },
+  {
     id: 'data',
     label: 'Data',
     items: [
@@ -50,14 +58,6 @@ export const NAV_GROUPS: NavGroup[] = [
     items: [
       { label: 'Kafka', to: '/kafka', icon: Zap },
       { label: 'Cache', to: '/cache', icon: Layers },
-    ],
-  },
-  {
-    id: 'observability',
-    label: 'Observability',
-    items: [
-      { label: 'Dashboard', to: '/dashboard', icon: BarChart3 },
-      { label: 'Pipeline events', to: '/observability', icon: Activity },
     ],
   },
   {

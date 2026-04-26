@@ -22,6 +22,7 @@
   --color-canvas: var(--canvas);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3, var(--surface-2));   /* 4th depth — progress bars, sub-wells; falls back to surface-2 */
   --color-sidebar: var(--sidebar);
   --color-sidebar-elevated: var(--sidebar-elevated);
   --color-sidebar-border: var(--sidebar-border);
@@ -47,10 +48,36 @@
   --color-brand: var(--brand);
   --color-brand-on-dark: var(--brand-on-dark);
 
+  /* Brand accents — gradient stops, sidebar active bar, secondary CTAs.
+     Themes that don't define these fall back to --brand so existing themes
+     don't break visually; the manager themes hand-tune all three. */
+  --color-brand-accent-1: var(--brand-accent-1, var(--brand));
+  --color-brand-accent-2: var(--brand-accent-2, var(--brand));
+  --color-brand-accent-3: var(--brand-accent-3, var(--brand));
+
+  /* Brand-deep tones — for sidebars that want gradient or two-tone depth. */
+  --color-brand-deep: var(--brand-deep, var(--sidebar));
+  --color-brand-deep-2: var(--brand-deep-2, var(--sidebar-elevated));
+
   /* Functional */
   --color-primary: var(--primary);
   --color-primary-fg: var(--primary-fg);
   --color-primary-hover: var(--primary-hover);
+  /* Semi-transparent primary for KPI icon backgrounds, soft buttons,
+     status pill washes, focus halos. Themes can override; default uses
+     color-mix at 14% / 28% so every theme gets a usable soft variant. */
+  --color-primary-soft: var(--primary-soft, color-mix(in srgb, var(--primary) 14%, transparent));
+  --color-primary-soft-strong: var(--primary-soft-strong, color-mix(in srgb, var(--primary) 28%, transparent));
+
+  /* AI signal + glow — for pulse dots, glowing CTA shadows, "live" indicators. */
+  --color-ai-signal: var(--ai-signal, var(--primary));
+  --color-ai-glow: var(--ai-glow, color-mix(in srgb, var(--primary) 30%, transparent));
+
+  /* 3-stop gradient — used on hero AI banners, gradient buttons, brand mark backgrounds.
+     Defaults walk primary → brand-accent-2 → brand so existing themes get a usable gradient. */
+  --color-grad-from: var(--grad-from, var(--primary));
+  --color-grad-via: var(--grad-via, var(--brand-accent-2, var(--brand)));
+  --color-grad-to: var(--grad-to, var(--brand));
   --color-info: var(--info);
   --color-info-wash: var(--info-wash);
   --color-info-fg: var(--info-fg);
@@ -74,29 +101,44 @@
   --color-cat-sink: var(--cat-sink);
 }
 
-/* Default theme = Strata. Other themes activate via [data-theme="..."] on <html>. */
-@import "./themes/strata.css";
-@import "./themes/slate.css";
-@import "./themes/phosphor.css";
-@import "./themes/plate.css";
+/* Default = Electric Violet (manager's launchpad-v4 default).
+   Other themes activate via [data-theme="..."] on <html>. */
+
+/* Manager's launchpad-v4 themes — gradient + accent rich, on top of dropdown */
+@import "./themes/electric-violet.css";
+@import "./themes/neural-midnight.css";
+@import "./themes/atlas-blue.css";
+@import "./themes/quantum-mint.css";
+@import "./themes/studio-mono.css";
+@import "./themes/sunset-coral.css";
+@import "./themes/cobalt-electric.css";
+@import "./themes/indigo-butter.css";
+@import "./themes/burgundy-gold.css";
+@import "./themes/cherry-vanilla.css";
+@import "./themes/juniper-gold.css";
+
+/* Our themes */
+@import "./themes/sage-inverted.css";
+@import "./themes/boomi.css";
+@import "./themes/omniforce.css";
+@import "./themes/sapphire.css";
+@import "./themes/unimax.css";
+@import "./themes/ov-teal.css";
+@import "./themes/gravitas.css";
+@import "./themes/audi.css";
+@import "./themes/sage.css";
+@import "./themes/xanthous.css";
+@import "./themes/tricolor.css";
+@import "./themes/royal-purple.css";
+@import "./themes/vesper.css";
 @import "./themes/blue.css";
 @import "./themes/light-teal.css";
 @import "./themes/lime-neon.css";
 @import "./themes/purple-orange.css";
-@import "./themes/sage.css";
-@import "./themes/sage-inverted.css";
-@import "./themes/boomi.css";
-@import "./themes/xanthous.css";
-@import "./themes/tricolor.css";
-@import "./themes/royal-purple.css";
-@import "./themes/burgundy.css";
-@import "./themes/cherry-cola.css";
-@import "./themes/scuderia.css";
-@import "./themes/audi.css";
-@import "./themes/juniper.css";
-@import "./themes/vesper.css";
-@import "./themes/electric-purple.css";
-@import "./themes/indigo-butter.css";
+@import "./themes/strata.css";
+@import "./themes/slate.css";
+@import "./themes/phosphor.css";
+@import "./themes/plate.css";
 
 /*
  * Global color transition — the only place a wildcard selector is acceptable.
@@ -205,6 +247,83 @@ body {
   box-shadow:
     0 2px 4px color-mix(in srgb, var(--color-primary) 10%, transparent),
     0 16px 48px -16px color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+/* Sidebar pattern — subtle gradient depth for the chrome:
+   1. Brand-accent glow at top-left for "lit corner" warmth
+   2. Diagonal linear gradient from sidebar → brand-deep-2 so the bottom feels weightier
+   No dot-grid: it added visual noise on darker themes. */
+.sidebar-pattern {
+  background-color: var(--color-sidebar);
+  background-image:
+    radial-gradient(
+      ellipse 80% 50% at 15% 0%,
+      color-mix(in srgb, var(--color-brand-accent-2) 14%, transparent) 0%,
+      transparent 60%
+    ),
+    linear-gradient(
+      175deg,
+      var(--color-sidebar) 0%,
+      var(--color-sidebar) 35%,
+      var(--color-brand-deep-2) 100%
+    );
+}
+
+/* AI glow — colored shadow under primary CTAs / banners. Pulls from
+   --color-ai-glow, which defaults to primary @ 30% alpha. */
+.shadow-ai-glow {
+  box-shadow: 0 6px 24px var(--color-ai-glow);
+}
+
+.shadow-ai-glow-lg {
+  box-shadow:
+    0 4px 12px color-mix(in srgb, var(--color-primary) 18%, transparent),
+    0 16px 48px var(--color-ai-glow);
+}
+
+/* 3-stop brand gradient — used on AI hero banners + gradient buttons.
+   Theme-driven via --color-grad-from / via / to. */
+.bg-brand-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-grad-from) 0%,
+    var(--color-grad-via) 50%,
+    var(--color-grad-to) 100%
+  );
+}
+
+/* Soft pulse for "live" / AI-signal indicators */
+@keyframes ai-pulse {
+  0% { box-shadow: 0 0 0 0 var(--color-ai-glow); }
+  70% { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+.ai-pulse {
+  animation: ai-pulse 1.6s ease-out infinite;
+}
+
+/* Themed text-selection. Subtle but every theme suddenly has personality
+   even on plain drag-select. */
+::selection {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+/* Gradient text — uses the same 3-stop gradient as bg-brand-gradient.
+   Applied to hero stat numbers and a few highlighted headline words.
+   Theme-driven via --color-grad-from / via / to so it re-paints on theme switch. */
+.text-gradient-brand {
+  background: linear-gradient(
+    135deg,
+    var(--color-grad-from) 0%,
+    var(--color-grad-via) 50%,
+    var(--color-grad-to) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 /* Mono numerals where needed */

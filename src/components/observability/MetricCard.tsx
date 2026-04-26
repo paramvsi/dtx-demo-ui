@@ -15,7 +15,8 @@ interface MetricCardProps {
 }
 
 const VARIANT_STYLES: Record<MetricCardProps['variant'], { wash: string; fg: string; iconBg: string; iconFg: string }> = {
-  neutral: { wash: 'bg-surface', fg: 'text-text', iconBg: 'bg-surface-2', iconFg: 'text-text-muted' },
+  // neutral now uses primary-soft + primary for the icon — manager's KPI pattern from launchpad-v4 line 275
+  neutral: { wash: 'bg-surface', fg: 'text-text', iconBg: 'bg-primary-soft', iconFg: 'text-primary' },
   success: { wash: 'bg-success-wash', fg: 'text-success-fg', iconBg: 'bg-success/15', iconFg: 'text-success-fg' },
   warning: { wash: 'bg-warning-wash', fg: 'text-warning-fg', iconBg: 'bg-warning/15', iconFg: 'text-warning-fg' },
   danger: { wash: 'bg-danger-wash', fg: 'text-danger-fg', iconBg: 'bg-danger/15', iconFg: 'text-danger-fg' },

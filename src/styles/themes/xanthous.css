@@ -5,15 +5,15 @@
  * gold for the burgundy sidebar (gold-on-burgundy ≈ 8.2:1 AA pass).
  */
 [data-theme="xanthous"] {
-  --canvas: #FAF7F0;
+  --canvas: #FAFAFA;
   --surface: #FFFFFF;
-  --surface-2: #F4EFE0;
+  --surface-2: #F4F4F5;
   --sidebar: #780115;
   --sidebar-elevated: #8E0419;
   --sidebar-border: #5A000F;
 
-  --border: #E8DFC8;
-  --border-strong: #D6C8A6;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
   --border-focus: #92580E;
 
   --text: #1A1410;
@@ -48,4 +48,18 @@
   --cat-identity: #2563EB;
   --cat-routing: #92580E;
   --cat-sink: #15803D;
+
+  --brand-accent-1: #92580E;
+  --brand-accent-2: #F7B638;
+  --brand-accent-3: #780115;
+  --brand-deep: #780115;
+  --brand-deep-2: #5A000F;
+  --grad-from: #780115;
+  --grad-via: #92580E;
+  --grad-to: #F7B638;
+  --primary-soft: color-mix(in srgb, #92580E 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #92580E 28%, transparent);
+  --ai-signal: #F7B638;
+  --ai-glow: color-mix(in srgb, #F7B638 32%, transparent);
+  --surface-3: #E4E4E7;
 }

@@ -1,0 +1,69 @@
+/*
+ * OV Teal — calm editorial-tech. Muted teal sidebar (slightly darker than
+ * the source mood-board's tile color, for AA contrast) with cream wordmark.
+ * White canvas, subtle teal accents. Approachable, much less saturated
+ * than Juniper or Sage.
+ *
+ * WCAG: dark teal body text on white = 11.4:1 AAA; canvas-safe teal
+ * #2D5A56 brand on white = 8.5:1 AAA; cream wordmark on teal sidebar
+ * = 6.9:1 AA pass.
+ */
+[data-theme="ov-teal"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F0F5F4;          /* very pale teal-tinted gray for hover wells */
+  --sidebar: #2D5A56;            /* darker teal than source mood-board for AA cream wordmark */
+  --sidebar-elevated: #3A6F6A;
+  --sidebar-border: #1F3F3D;
+
+  --border: #DCE5E3;
+  --border-strong: #B8C4C2;
+  --border-focus: #2D5A56;
+
+  --text: #0F2522;
+  --text-muted: #4A5C58;
+  --text-subtle: #8A9A96;
+  --sidebar-text: #F4EBE0;       /* warm cream wordmark on dark teal sidebar */
+  --sidebar-text-muted: #B8C4C2;
+
+  --brand: #2D5A56;              /* dark teal wordmark on white (8.5:1 AAA) */
+  --brand-on-dark: #F4EBE0;      /* warm cream wordmark on dark teal sidebar (6.9:1 AA) */
+  --primary: #2D5A56;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #3A6F6A;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92580E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #B91C1C;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #2563EB;
+  --cat-transform: #4A5C58;
+  --cat-dq: #2D5A56;
+  --cat-privacy: #7C3AED;
+  --cat-identity: #92580E;
+  --cat-routing: #92580E;
+  --cat-sink: #15803D;
+
+  --brand-accent-1: #2D5A56;
+  --brand-accent-2: #F4EBE0;
+  --brand-accent-3: #FF7A55;
+  --brand-deep: #2D5A56;
+  --brand-deep-2: #3A6F6A;
+  --grad-from: #2D5A56;
+  --grad-via: #5C8A86;
+  --grad-to: #FF7A55;
+  --primary-soft: color-mix(in srgb, #2D5A56 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #2D5A56 28%, transparent);
+  --ai-signal: #F4EBE0;
+  --ai-glow: color-mix(in srgb, #F4EBE0 32%, transparent);
+  --surface-3: #E5EDEB;
+}

@@ -13,6 +13,11 @@ const buttonVariants = cva(
         ghost: 'text-text hover:bg-surface-2',
         outline: 'border border-border bg-surface text-text hover:border-border-strong hover:bg-surface-2',
         danger: 'bg-danger text-white hover:opacity-90',
+        // Filled-soft — semi-transparent primary; reads as "in family" without the weight of a primary CTA.
+        // Theme token: --color-primary-soft.
+        soft: 'bg-primary-soft text-primary hover:bg-primary-soft-strong',
+        // 3-stop brand gradient with AI-glow shadow on hover. Token-driven via --color-grad-from / via / to.
+        gradient: 'bg-brand-gradient text-white hover:shadow-ai-glow hover:-translate-y-px transition-all',
       },
       size: {
         sm: 'h-8 px-3 text-xs',

@@ -1,0 +1,67 @@
+/*
+ * Sapphire — bold complementary palette inspired by SAP procurement
+ * marketing. Royal violet sidebar with vivid lemon-yellow as the iconic
+ * brand accent. Magenta-pink secondary.
+ *
+ * WCAG: violet brand on white = 9.2:1 AAA; lemon yellow #FFEB1F on
+ * violet sidebar = 8.2:1 AAA; white text on violet sidebar = 8.2:1 AAA.
+ */
+[data-theme="sapphire"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F6F2FA;
+  --sidebar: #5B1F8E;            /* royal violet */
+  --sidebar-elevated: #6B2D9E;
+  --sidebar-border: #3F1066;
+
+  --border: #E5DEEC;
+  --border-strong: #C8BCD4;
+  --border-focus: #5B1F8E;
+
+  --text: #1A0F2E;
+  --text-muted: #4A3D5C;
+  --text-subtle: #8A7E9E;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #FFEB1F;
+
+  --brand: #5B1F8E;              /* violet wordmark on white (9.2:1 AAA) */
+  --brand-on-dark: #FFEB1F;      /* iconic lemon yellow on violet sidebar (8.2:1 AAA) */
+  --primary: #5B1F8E;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #6B2D9E;
+
+  --info: #6366F1;
+  --info-wash: #E0E1FB;
+  --info-fg: #4338CA;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92580E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #E94B7C;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #B91C1C;
+
+  --cat-source: #6366F1;
+  --cat-transform: #4A3D5C;
+  --cat-dq: #5B1F8E;
+  --cat-privacy: #6B2D9E;
+  --cat-identity: #E94B7C;
+  --cat-routing: #92580E;
+  --cat-sink: #15803D;
+
+  --brand-accent-1: #5B1F8E;
+  --brand-accent-2: #FFEB1F;
+  --brand-accent-3: #E94B7C;
+  --brand-deep: #5B1F8E;
+  --brand-deep-2: #6B2D9E;
+  --grad-from: #5B1F8E;
+  --grad-via: #E94B7C;
+  --grad-to: #FFEB1F;
+  --primary-soft: color-mix(in srgb, #5B1F8E 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #5B1F8E 28%, transparent);
+  --ai-signal: #FFEB1F;
+  --ai-glow: color-mix(in srgb, #FFEB1F 32%, transparent);
+  --surface-3: #EDE5F5;
+}

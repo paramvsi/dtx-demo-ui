@@ -1,0 +1,68 @@
+/*
+ * Burgundy Gold — manager's heritage palette with gradient + champagne.
+ * Warm gold-cream canvas, burgundy brand, champagne accent. Gradient
+ * walks deep burgundy → cherry → champagne gold.
+ *
+ * Hex values from daitics-launchpad-v4.html line 28 (light mode).
+ */
+[data-theme="burgundy-gold"] {
+  --canvas: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F5;
+  --surface-3: #E4E4E7;
+  --sidebar: #2A0508;
+  --sidebar-elevated: #3D080F;
+  --sidebar-border: #5A2530;
+
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --border-focus: #95122C;
+
+  --text: #3A0008;
+  --text-muted: #6E2D3A;
+  --text-subtle: #9C5C68;
+  --sidebar-text: #FDF4E0;
+  --sidebar-text-muted: #F5B82E;
+
+  --brand: #95122C;
+  --brand-on-dark: #F5B82E;        /* champagne wordmark on burgundy sidebar */
+  --brand-accent-1: #5C0010;
+  --brand-accent-2: #95122C;
+  --brand-accent-3: #F5B82E;       /* champagne — sidebar active bar */
+  --brand-deep: #2A0508;
+  --brand-deep-2: #3D080F;
+
+  --primary: #95122C;
+  --primary-fg: #FBF7E8;
+  --primary-hover: #7A0D24;
+  --primary-soft: color-mix(in srgb, #95122C 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #95122C 28%, transparent);
+
+  --ai-signal: #F5B82E;
+  --ai-glow: color-mix(in srgb, #F5B82E 32%, transparent);
+
+  --grad-from: #5C0010;
+  --grad-via: #95122C;
+  --grad-to: #F5B82E;
+
+  --info: #3D5A80;
+  --info-wash: color-mix(in srgb, #3D5A80 14%, transparent);
+  --info-fg: #1E40AF;
+  --success: #7A8B3E;
+  --success-wash: color-mix(in srgb, #7A8B3E 14%, transparent);
+  --success-fg: #4A5A1E;
+  --warning: #D89500;
+  --warning-wash: color-mix(in srgb, #D89500 14%, transparent);
+  --warning-fg: #92580E;
+  --danger: #C0392B;
+  --danger-wash: color-mix(in srgb, #C0392B 14%, transparent);
+  --danger-fg: #991B1B;
+
+  --cat-source: #3D5A80;
+  --cat-transform: #6E2D3A;
+  --cat-dq: #7A8B3E;
+  --cat-privacy: #95122C;
+  --cat-identity: #9B4A6F;
+  --cat-routing: #D89500;
+  --cat-sink: #7A8B3E;
+}

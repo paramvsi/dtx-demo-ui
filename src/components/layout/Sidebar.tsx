@@ -17,7 +17,7 @@ export function Sidebar() {
     <motion.aside
       animate={{ width: collapsed ? COLLAPSED_W : EXPANDED_W }}
       transition={SPRING.layout}
-      className="relative flex shrink-0 flex-col border-r border-sidebar-border bg-sidebar text-sidebar-text"
+      className="sidebar-pattern relative flex shrink-0 flex-col border-r border-sidebar-border text-sidebar-text"
     >
       <div className={cn('flex h-14 items-center px-4', collapsed && 'justify-center px-0')}>
         <Brand collapsed={collapsed} surface="dark" />
@@ -33,7 +33,7 @@ export function Sidebar() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, transition: { duration: 0.18, ease: EASE.enter, delay: 0.08 } }}
                   exit={{ opacity: 0, transition: { duration: 0.1, ease: EASE.exit } }}
-                  className="px-2.5 pb-1.5 font-mono text-[9px] uppercase tracking-[0.12em] text-sidebar-text-muted"
+                  className="px-2.5 pb-1.5 font-mono text-[9px] uppercase tracking-[0.12em] text-sidebar-text/55"
                 >
                   {group.label}
                 </motion.div>
@@ -81,11 +81,13 @@ function SidebarLink({
       end={item.to === '/'}
       className={({ isActive }) =>
         cn(
-          'group relative flex items-center gap-3 rounded-md px-2.5 py-2 text-sm transition-colors',
+          'group relative flex items-center gap-3 rounded-md px-2.5 py-2 text-sm font-medium transition-colors',
           collapsed && 'justify-center px-0 h-10 w-10 mx-auto',
           isActive
-            ? 'bg-sidebar-elevated text-sidebar-text'
-            : 'text-sidebar-text-muted hover:bg-sidebar-elevated/50 hover:text-sidebar-text',
+            // Active: theme-accent wash, full white text, slightly heavier
+            ? 'bg-[color-mix(in_srgb,var(--color-brand-accent-2)_22%,transparent)] text-sidebar-text font-semibold'
+            // Inactive: white at 80% opacity reads brighter than per-theme muted gray on every theme
+            : 'text-sidebar-text/80 hover:bg-[color-mix(in_srgb,var(--color-brand-accent-2)_12%,transparent)] hover:text-sidebar-text',
         )
       }
       aria-current={undefined /* let NavLink set it via render prop fn below */}
@@ -95,7 +97,7 @@ function SidebarLink({
           {isActive && (
             <motion.span
               layoutId="sidebar-active-bar"
-              className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r bg-brand"
+              className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-r bg-brand-accent-2"
               transition={SPRING.default}
             />
           )}

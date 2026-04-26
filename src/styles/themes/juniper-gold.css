@@ -1,0 +1,68 @@
+/*
+ * Juniper Gold — manager's herbarium palette. Warm cream canvas with
+ * deep forest brand and sage + gold accents. Gradient walks forest →
+ * sage → gold.
+ *
+ * Hex values from daitics-launchpad-v4.html line 34 (light mode).
+ */
+[data-theme="juniper-gold"] {
+  --canvas: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F5;
+  --surface-3: #E4E4E7;
+  --sidebar: #0F2818;
+  --sidebar-elevated: #163524;
+  --sidebar-border: #2A5038;
+
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --border-focus: #1F3D2B;
+
+  --text: #0F2818;
+  --text-muted: #3D5444;
+  --text-subtle: #6E8076;
+  --sidebar-text: #F5F0E0;
+  --sidebar-text-muted: #F4D03F;
+
+  --brand: #1F3D2B;
+  --brand-on-dark: #D4A93C;        /* gold wordmark on deep forest sidebar */
+  --brand-accent-1: #1F3D2B;
+  --brand-accent-2: #5B8C6E;       /* sage — sidebar active bar */
+  --brand-accent-3: #D4A93C;       /* gold */
+  --brand-deep: #0F2818;
+  --brand-deep-2: #163524;
+
+  --primary: #1F3D2B;
+  --primary-fg: #F5F0E0;
+  --primary-hover: #163524;
+  --primary-soft: color-mix(in srgb, #1F3D2B 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #1F3D2B 28%, transparent);
+
+  --ai-signal: #D4A93C;
+  --ai-glow: color-mix(in srgb, #D4A93C 32%, transparent);
+
+  --grad-from: #1F3D2B;
+  --grad-via: #5B8C6E;
+  --grad-to: #D4A93C;
+
+  --info: #3D6B8C;
+  --info-wash: color-mix(in srgb, #3D6B8C 14%, transparent);
+  --info-fg: #1E40AF;
+  --success: #5B8C6E;
+  --success-wash: color-mix(in srgb, #5B8C6E 14%, transparent);
+  --success-fg: #3D5A4F;
+  --warning: #D4A93C;
+  --warning-wash: color-mix(in srgb, #D4A93C 14%, transparent);
+  --warning-fg: #92580E;
+  --danger: #C0392B;
+  --danger-wash: color-mix(in srgb, #C0392B 14%, transparent);
+  --danger-fg: #991B1B;
+
+  --cat-source: #3D6B8C;
+  --cat-transform: #3D5444;
+  --cat-dq: #5B8C6E;
+  --cat-privacy: #1F3D2B;
+  --cat-identity: #8B6F47;
+  --cat-routing: #D4A93C;
+  --cat-sink: #5B8C6E;
+}

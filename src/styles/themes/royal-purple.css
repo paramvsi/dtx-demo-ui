@@ -49,4 +49,18 @@
   --cat-identity: #9D4EDD;
   --cat-routing: #92400E;
   --cat-sink: #15803D;
+
+  --brand-accent-1: #5A189A;
+  --brand-accent-2: #9D4EDD;
+  --brand-accent-3: #C77DFF;
+  --brand-deep: #5A189A;
+  --brand-deep-2: #4A0E80;
+  --grad-from: #5A189A;
+  --grad-via: #9D4EDD;
+  --grad-to: #C77DFF;
+  --primary-soft: color-mix(in srgb, #5A189A 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #5A189A 28%, transparent);
+  --ai-signal: #9D4EDD;
+  --ai-glow: color-mix(in srgb, #9D4EDD 32%, transparent);
+  --surface-3: #EBE0F5;
 }

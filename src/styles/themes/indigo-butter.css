@@ -1,54 +1,68 @@
 /*
- * Indigo Butter — bold complementary palette: deep indigo chrome with
- * butter yellow as the iconic accent. Source: #200A5E + #FFE566.
- * WCAG: butter #FFE566 on white = 1.26:1 catastrophic fail. Resolution:
- *   --brand uses indigo #200A5E as the wordmark color (15.6:1 AAA on cream)
- *   --brand-on-dark keeps butter for the indigo sidebar (13.1:1 AAA pass)
- * Canvas is warm cream #FBF8E8 to harmonize the indigo+butter complementary
- * pair without losing legibility.
+ * Indigo Butter — manager's gradient-rich version (replaces our flat one).
+ * Cream canvas with deep indigo brand and butter-yellow accent. Gradient
+ * walks indigo → mid-violet → butter (the bold complementary inversion).
+ *
+ * Hex values from daitics-launchpad-v4.html line 25 (light mode).
  */
 [data-theme="indigo-butter"] {
-  --canvas: #FFFFFF;             /* cool white — the indigo+butter complementary pop is stronger on white than cream */
+  --canvas: #FAFAFA;
   --surface: #FFFFFF;
-  --surface-2: #F5F5F8;
-  --sidebar: #200A5E;
-  --sidebar-elevated: #2E1078;
-  --sidebar-border: #14063D;
+  --surface-2: #F4F4F5;
+  --surface-3: #E4E4E7;
+  --sidebar: #0E0833;
+  --sidebar-elevated: #1A0B4D;
+  --sidebar-border: #3A2080;
 
-  --border: #E5E5EC;
-  --border-strong: #C8C8D4;
-  --border-focus: #200A5E;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --border-focus: #1A0B4D;
 
-  --text: #14063D;
-  --text-muted: #4A4555;
-  --text-subtle: #8A86A0;
-  --sidebar-text: #FFFFFF;
+  --text: #1A0B4D;
+  --text-muted: #4A3E78;
+  --text-subtle: #7A6E9E;
+  --sidebar-text: #FBF7E8;
   --sidebar-text-muted: #FFE566;
 
-  --brand: #200A5E;
-  --brand-on-dark: #FFE566;
-  --primary: #200A5E;
-  --primary-fg: #FFFFFF;
-  --primary-hover: #2E1078;
+  --brand: #1A0B4D;
+  --brand-on-dark: #FFE566;        /* iconic butter on deep indigo sidebar */
+  --brand-accent-1: #FFE566;       /* butter */
+  --brand-accent-2: #FFD93D;       /* deeper butter — sidebar active bar */
+  --brand-accent-3: #4A1F8C;       /* mid-violet */
+  --brand-deep: #0E0833;
+  --brand-deep-2: #1A0B4D;
 
-  --info: #2563EB;
-  --info-wash: #DBEAFE;
+  --primary: #1A0B4D;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #251368;
+  --primary-soft: color-mix(in srgb, #1A0B4D 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #1A0B4D 28%, transparent);
+
+  --ai-signal: #FFE566;
+  --ai-glow: color-mix(in srgb, #FFE566 40%, transparent);
+
+  --grad-from: #1A0B4D;
+  --grad-via: #4A1F8C;
+  --grad-to: #FFE566;
+
+  --info: #3B5BC4;
+  --info-wash: color-mix(in srgb, #3B5BC4 14%, transparent);
   --info-fg: #1E40AF;
   --success: #15803D;
-  --success-wash: #DCFCE7;
-  --success-fg: #15803D;
-  --warning: #92580E;
-  --warning-wash: #FEF3C7;
-  --warning-fg: #78350F;
-  --danger: #B91C1C;
-  --danger-wash: #FEE2E2;
+  --success-wash: color-mix(in srgb, #15803D 14%, transparent);
+  --success-fg: #14532D;
+  --warning: #CA8A04;
+  --warning-wash: color-mix(in srgb, #CA8A04 14%, transparent);
+  --warning-fg: #92580E;
+  --danger: #C92A2A;
+  --danger-wash: color-mix(in srgb, #C92A2A 14%, transparent);
   --danger-fg: #991B1B;
 
-  --cat-source: #2563EB;
-  --cat-transform: #4A4030;
+  --cat-source: #3B5BC4;
+  --cat-transform: #4A3E78;
   --cat-dq: #15803D;
-  --cat-privacy: #200A5E;
-  --cat-identity: #2E1078;
-  --cat-routing: #92580E;
+  --cat-privacy: #1A0B4D;
+  --cat-identity: #6B3FB5;
+  --cat-routing: #CA8A04;
   --cat-sink: #15803D;
 }

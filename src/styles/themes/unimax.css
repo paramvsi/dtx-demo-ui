@@ -1,0 +1,69 @@
+/*
+ * UniMax — editorial luxury / financial heritage. Dark teal-navy sidebar
+ * with champagne-gold serif accents. Warm cream canvas to set the
+ * "thoughtfully yours" mood. Closer to a Bentley brochure than a tech
+ * dashboard — but the surfaces still pass tech-product readability.
+ *
+ * WCAG: dark teal text on cream = 11.5:1 AAA; canvas-safe dark gold
+ * #92580E on cream = 5.4:1 AA; champagne gold #C9A85A on dark teal
+ * sidebar = 5.8:1 AA; cream wordmark on sidebar = 11.5:1 AAA.
+ */
+[data-theme="unimax"] {
+  --canvas: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F5;
+  --sidebar: #0A2E2C;            /* dark teal-navy */
+  --sidebar-elevated: #143A37;
+  --sidebar-border: #061F1E;
+
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --border-focus: #92580E;
+
+  --text: #0A2E2C;
+  --text-muted: #4A5550;
+  --text-subtle: #8A9085;
+  --sidebar-text: #F4EBD8;       /* warm cream text on dark teal sidebar */
+  --sidebar-text-muted: #C9A85A; /* champagne gold for muted/secondary lines */
+
+  --brand: #92580E;              /* canvas-safe dark gold (5.4:1 AA on cream) */
+  --brand-on-dark: #C9A85A;      /* iconic champagne gold on dark teal sidebar (5.8:1 AA) */
+  --primary: #0A2E2C;            /* dark teal CTA */
+  --primary-fg: #F4EBD8;
+  --primary-hover: #143A37;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92580E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #B91C1C;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #2563EB;
+  --cat-transform: #4A5550;
+  --cat-dq: #0A2E2C;
+  --cat-privacy: #92580E;
+  --cat-identity: #C9A85A;
+  --cat-routing: #92580E;
+  --cat-sink: #15803D;
+
+  --brand-accent-1: #0A2E2C;
+  --brand-accent-2: #C9A85A;
+  --brand-accent-3: #0A2E2C;
+  --brand-deep: #0A2E2C;
+  --brand-deep-2: #143A37;
+  --grad-from: #0A2E2C;
+  --grad-via: #C9A85A;
+  --grad-to: #92580E;
+  --primary-soft: color-mix(in srgb, #0A2E2C 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #0A2E2C 28%, transparent);
+  --ai-signal: #C9A85A;
+  --ai-glow: color-mix(in srgb, #C9A85A 32%, transparent);
+  --surface-3: #E4E4E7;
+}

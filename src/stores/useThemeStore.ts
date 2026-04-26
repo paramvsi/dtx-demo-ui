@@ -12,6 +12,10 @@ function applyToDom(theme: ThemeId): void {
   document.documentElement.dataset.theme = theme;
 }
 
+function isValidTheme(id: string): id is ThemeId {
+  return THEMES.some((t) => t.id === id);
+}
+
 export const useThemeStore = create<ThemeState>()(
   persist(
     (set, get) => ({
@@ -34,9 +38,12 @@ export const useThemeStore = create<ThemeState>()(
     {
       name: 'dtx-theme',
       onRehydrateStorage: () => (state) => {
-        if (state?.theme) {
+        // Persisted IDs may belong to deleted themes (e.g. scuderia, electric-purple).
+        // Fall back to default cleanly so the dropdown stays in sync with the DOM.
+        if (state?.theme && isValidTheme(state.theme)) {
           applyToDom(state.theme);
         } else {
+          if (state) state.theme = DEFAULT_THEME;
           applyToDom(DEFAULT_THEME);
         }
       },

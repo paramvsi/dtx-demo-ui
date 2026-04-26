@@ -1,0 +1,68 @@
+/*
+ * Cherry Vanilla — manager's refined heritage palette. Warm cream canvas
+ * with deep cherry brand and coral + camel accents. Gradient walks
+ * cherry → coral → camel.
+ *
+ * Hex values from daitics-launchpad-v4.html line 31 (light mode).
+ */
+[data-theme="cherry-vanilla"] {
+  --canvas: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F5;
+  --surface-3: #E4E4E7;
+  --sidebar: #2A0A0E;
+  --sidebar-elevated: #3D0F15;
+  --sidebar-border: #5A2530;
+
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --border-focus: #8B0A1F;
+
+  --text: #1A0608;
+  --text-muted: #5C3A40;
+  --text-subtle: #8B6F73;
+  --sidebar-text: #F7EFE2;
+  --sidebar-text-muted: #D4A574;
+
+  --brand: #8B0A1F;
+  --brand-on-dark: #FF6B47;        /* coral on cherry sidebar */
+  --brand-accent-1: #8B0A1F;
+  --brand-accent-2: #FF6B47;       /* coral — sidebar active bar */
+  --brand-accent-3: #D4A574;       /* camel */
+  --brand-deep: #2A0A0E;
+  --brand-deep-2: #3D0F15;
+
+  --primary: #8B0A1F;
+  --primary-fg: #F7EFE2;
+  --primary-hover: #6E0818;
+  --primary-soft: color-mix(in srgb, #8B0A1F 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #8B0A1F 28%, transparent);
+
+  --ai-signal: #FF6B47;
+  --ai-glow: color-mix(in srgb, #FF6B47 32%, transparent);
+
+  --grad-from: #8B0A1F;
+  --grad-via: #FF6B47;
+  --grad-to: #D4A574;
+
+  --info: #3B5998;
+  --info-wash: color-mix(in srgb, #3B5998 14%, transparent);
+  --info-fg: #1E40AF;
+  --success: #5C7C5A;
+  --success-wash: color-mix(in srgb, #5C7C5A 14%, transparent);
+  --success-fg: #3D5A3C;
+  --warning: #B5851F;
+  --warning-wash: color-mix(in srgb, #B5851F 14%, transparent);
+  --warning-fg: #92580E;
+  --danger: #8B0A1F;
+  --danger-wash: color-mix(in srgb, #8B0A1F 14%, transparent);
+  --danger-fg: #6E0818;
+
+  --cat-source: #3B5998;
+  --cat-transform: #5C3A40;
+  --cat-dq: #5C7C5A;
+  --cat-privacy: #8B0A1F;
+  --cat-identity: #C26A47;
+  --cat-routing: #B5851F;
+  --cat-sink: #5C7C5A;
+}

@@ -1,0 +1,69 @@
+/*
+ * Gravitas — recruitment-energetic. Deep navy sidebar with vivid coral
+ * brand on white canvas. Cool steel-blue secondary accent. Navy provides
+ * the authority; coral provides the playful CTA energy. Like a
+ * Bloomberg-meets-startup recruitment site.
+ *
+ * WCAG: dark navy body text on white = 13.4:1 AAA; canvas-safe coral
+ * #C73D1F brand on white = 5.1:1 AA; white wordmark on navy sidebar
+ * = 14.6:1 AAA; lighter coral #FF7A55 on navy sidebar = 5.4:1 AA.
+ */
+[data-theme="gravitas"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F4F6FA;          /* cool gray with very faint blue tint */
+  --sidebar: #1A2756;            /* deep navy */
+  --sidebar-elevated: #243260;
+  --sidebar-border: #0E1740;
+
+  --border: #E2E5EC;
+  --border-strong: #C0C8D4;
+  --border-focus: #C73D1F;
+
+  --text: #1A2756;               /* body text uses the navy itself — strong brand thread */
+  --text-muted: #4A5568;
+  --text-subtle: #94A3B8;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #6F87B5; /* steel-blue secondary from the splatter dots */
+
+  --brand: #C73D1F;              /* canvas-safe coral wordmark on white (5.1:1 AA) */
+  --brand-on-dark: #FF7A55;      /* lighter coral on navy sidebar (5.4:1 AA pass) */
+  --primary: #1A2756;            /* navy primary CTA — Bloomberg-style authority */
+  --primary-fg: #FFFFFF;
+  --primary-hover: #243260;
+
+  --info: #6F87B5;
+  --info-wash: #E0E7F0;
+  --info-fg: #1A2756;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92580E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #C73D1F;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #6F87B5;
+  --cat-transform: #4A5568;
+  --cat-dq: #1A2756;
+  --cat-privacy: #7C3AED;
+  --cat-identity: #FF7A55;
+  --cat-routing: #C73D1F;
+  --cat-sink: #15803D;
+
+  --brand-accent-1: #1A2756;
+  --brand-accent-2: #FF7A55;
+  --brand-accent-3: #6F87B5;
+  --brand-deep: #1A2756;
+  --brand-deep-2: #243260;
+  --grad-from: #1A2756;
+  --grad-via: #6F87B5;
+  --grad-to: #FF7A55;
+  --primary-soft: color-mix(in srgb, #1A2756 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #1A2756 28%, transparent);
+  --ai-signal: #FF7A55;
+  --ai-glow: color-mix(in srgb, #FF7A55 32%, transparent);
+  --surface-3: #E5E8EE;
+}

@@ -3,7 +3,6 @@
  * Deep navy-teal sidebar, soft gray canvas, orange brand identity (wordmark only).
  * Databricks territory.
  */
-:root,
 [data-theme="strata"] {
   --canvas: #F5F5F5;
   --surface: #FFFFFF;
@@ -48,4 +47,18 @@
   --cat-identity: #EC4899;
   --cat-routing: #F59E0B;
   --cat-sink: #16A34A;
+
+  --brand-accent-1: #0E2A3A;
+  --brand-accent-2: #14B8A6;
+  --brand-accent-3: #F59E0B;
+  --brand-deep: #0E2A3A;
+  --brand-deep-2: #1B3A4B;
+  --grad-from: #0E2A3A;
+  --grad-via: #14B8A6;
+  --grad-to: #FF3621;
+  --primary-soft: color-mix(in srgb, #0E2A3A 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #0E2A3A 28%, transparent);
+  --ai-signal: #14B8A6;
+  --ai-glow: color-mix(in srgb, #14B8A6 32%, transparent);
+  --surface-3: #E5E7EA;
 }

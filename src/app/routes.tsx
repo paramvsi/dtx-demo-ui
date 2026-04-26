@@ -5,7 +5,7 @@ import { PageSkeleton } from '@/components/layout/PageSkeleton';
 import Placeholder from '@/pages/Placeholder';
 
 // Lazy-loaded pages — each becomes its own chunk.
-const Dashboard = lazy(() => import('@/pages/Dashboard'));
+const Home = lazy(() => import('@/pages/Home'));
 const Pipelines = lazy(() => import('@/pages/Pipelines'));
 const PipelineDesigner = lazy(() => import('@/pages/PipelineDesigner'));
 const Schemas = lazy(() => import('@/pages/Schemas'));
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <AppShell />,
     children: [
       { index: true, element: <Navigate to="/dashboard" replace /> },
-      { path: 'dashboard', element: withSuspense(<Dashboard />) },
+      { path: 'dashboard', element: withSuspense(<Home />) },
       { path: 'pipelines', element: withSuspense(<Pipelines />) },
       { path: 'schemas', element: withSuspense(<Schemas />) },
       { path: 'synthetic-data', element: withSuspense(<SyntheticData />) },

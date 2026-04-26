@@ -166,7 +166,7 @@ export function CanvasToolbar() {
         {dryRunActive ? 'Running…' : 'Dry-run'}
       </Button>
 
-      <Button onClick={onDeploy} size="sm">
+      <Button onClick={onDeploy} size="sm" variant="gradient">
         <Rocket className="h-3.5 w-3.5" />
         Deploy
       </Button>

@@ -1,0 +1,67 @@
+/*
+ * Omniforce — SaaS-AI energy. Deep indigo-black sidebar with bright
+ * magenta-pink as the iconic brand accent and a mid-purple secondary.
+ *
+ * WCAG: dark indigo body text on white = 13.4:1 AAA; canvas-safe magenta
+ * #B8336B on white = 5.6:1 AA; bright magenta #FF4B91 on indigo-black
+ * sidebar = 5.2:1 AA; white sidebar text = 19:1 AAA.
+ */
+[data-theme="omniforce"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F5F4FA;          /* cool gray with very faint indigo tint */
+  --sidebar: #0A0E2A;            /* indigo-black */
+  --sidebar-elevated: #181E40;
+  --sidebar-border: #050818;
+
+  --border: #E5E5EE;
+  --border-strong: #C8C8D8;
+  --border-focus: #B8336B;
+
+  --text: #1A1F3A;
+  --text-muted: #4A4F68;
+  --text-subtle: #94A3B8;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #A3A8C5;
+
+  --brand: #B8336B;              /* canvas-safe magenta (5.6:1 AA on white) */
+  --brand-on-dark: #FF4B91;      /* iconic bright magenta-pink on indigo-black sidebar */
+  --primary: #0A0E2A;            /* indigo-black primary CTA — Stripe/Linear shape */
+  --primary-fg: #FFFFFF;
+  --primary-hover: #181E40;
+
+  --info: #6366F1;
+  --info-wash: #E0E1FB;
+  --info-fg: #4338CA;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92580E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #B8336B;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #6366F1;
+  --cat-transform: #4A4F68;
+  --cat-dq: #A35CFF;             /* mid-purple secondary from the brand mark */
+  --cat-privacy: #B8336B;
+  --cat-identity: #FF4B91;
+  --cat-routing: #92580E;
+  --cat-sink: #15803D;
+
+  --brand-accent-1: #B8336B;
+  --brand-accent-2: #FF4B91;
+  --brand-accent-3: #A35CFF;
+  --brand-deep: #0A0E2A;
+  --brand-deep-2: #181E40;
+  --grad-from: #B8336B;
+  --grad-via: #FF4B91;
+  --grad-to: #A35CFF;
+  --primary-soft: color-mix(in srgb, #B8336B 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #B8336B 28%, transparent);
+  --ai-signal: #FF4B91;
+  --ai-glow: color-mix(in srgb, #FF4B91 32%, transparent);
+  --surface-3: #ECECF5;
+}

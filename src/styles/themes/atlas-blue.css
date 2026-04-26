@@ -1,0 +1,68 @@
+/*
+ * Atlas Blue — corporate-modern. Cool blue-gray canvas with royal blue
+ * brand and violet+green accents on a near-black sidebar. Gradient walks
+ * royal blue → violet → green.
+ *
+ * Hex values from daitics-launchpad-v4.html line 40 (light mode).
+ */
+[data-theme="atlas-blue"] {
+  --canvas: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F5;
+  --surface-3: #E4E4E7;
+  --sidebar: #0B1220;
+  --sidebar-elevated: #131C2E;
+  --sidebar-border: #2E3D54;
+
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --border-focus: #0F4C9C;
+
+  --text: #0B1220;
+  --text-muted: #465467;
+  --text-subtle: #7A8AA0;
+  --sidebar-text: #F8FAFC;
+  --sidebar-text-muted: #C5D0E0;
+
+  --brand: #0F4C9C;
+  --brand-on-dark: #4D8DE6;
+  --brand-accent-1: #0F4C9C;
+  --brand-accent-2: #6E56CF;       /* violet — gradient mid */
+  --brand-accent-3: #00875A;       /* green */
+  --brand-deep: #0B1220;
+  --brand-deep-2: #131C2E;
+
+  --primary: #0F4C9C;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #0A3D80;
+  --primary-soft: color-mix(in srgb, #0F4C9C 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #0F4C9C 28%, transparent);
+
+  --ai-signal: #0F4C9C;
+  --ai-glow: color-mix(in srgb, #0F4C9C 30%, transparent);
+
+  --grad-from: #0F4C9C;
+  --grad-via: #6E56CF;
+  --grad-to: #00875A;
+
+  --info: #0F4C9C;
+  --info-wash: color-mix(in srgb, #0F4C9C 14%, transparent);
+  --info-fg: #0A3D80;
+  --success: #00875A;
+  --success-wash: color-mix(in srgb, #00875A 14%, transparent);
+  --success-fg: #00604A;
+  --warning: #B7791F;
+  --warning-wash: color-mix(in srgb, #B7791F 14%, transparent);
+  --warning-fg: #92580E;
+  --danger: #C41E3A;
+  --danger-wash: color-mix(in srgb, #C41E3A 14%, transparent);
+  --danger-fg: #991B1B;
+
+  --cat-source: #0F4C9C;
+  --cat-transform: #465467;
+  --cat-dq: #6E56CF;
+  --cat-privacy: #BE185D;
+  --cat-identity: #4D8DE6;
+  --cat-routing: #B7791F;
+  --cat-sink: #00875A;
+}

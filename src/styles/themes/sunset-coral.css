@@ -1,0 +1,67 @@
+/*
+ * Sunset Coral — warm-modern. Coral-pink cream canvas with electric
+ * coral brand and pink + violet accents. Gradient walks pink → coral → violet.
+ *
+ * Hex values from daitics-launchpad-v4.html line 49 (light mode).
+ */
+[data-theme="sunset-coral"] {
+  --canvas: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F5;
+  --surface-3: #E4E4E7;
+  --sidebar: #2A0820;
+  --sidebar-elevated: #3D0E2E;
+  --sidebar-border: #5C2050;
+
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --border-focus: #FF5A57;
+
+  --text: #2A0820;
+  --text-muted: #6E2D48;
+  --text-subtle: #A05870;
+  --sidebar-text: #FCEBF8;
+  --sidebar-text-muted: #E0B8D0;
+
+  --brand: #C73D2A;                /* darker coral for canvas-safe wordmark */
+  --brand-on-dark: #FF5A57;        /* iconic electric coral on dark plum sidebar */
+  --brand-accent-1: #FF5A57;
+  --brand-accent-2: #FCCBF0;       /* soft pink */
+  --brand-accent-3: #6700A3;       /* deep violet — gradient end */
+  --brand-deep: #2A0820;
+  --brand-deep-2: #3D0E2E;
+
+  --primary: #FF5A57;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #E54845;
+  --primary-soft: color-mix(in srgb, #FF5A57 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #FF5A57 28%, transparent);
+
+  --ai-signal: #FF5A57;
+  --ai-glow: color-mix(in srgb, #FF5A57 32%, transparent);
+
+  --grad-from: #FCCBF0;
+  --grad-via: #FF5A57;
+  --grad-to: #6700A3;
+
+  --info: #6700A3;
+  --info-wash: color-mix(in srgb, #6700A3 14%, transparent);
+  --info-fg: #4A0078;
+  --success: #00B886;
+  --success-wash: color-mix(in srgb, #00B886 14%, transparent);
+  --success-fg: #00785A;
+  --warning: #F5A623;
+  --warning-wash: color-mix(in srgb, #F5A623 14%, transparent);
+  --warning-fg: #92580E;
+  --danger: #FF3D5A;
+  --danger-wash: color-mix(in srgb, #FF3D5A 14%, transparent);
+  --danger-fg: #B91C40;
+
+  --cat-source: #6700A3;
+  --cat-transform: #6E2D48;
+  --cat-dq: #00B886;
+  --cat-privacy: #E02F75;
+  --cat-identity: #FF5A57;
+  --cat-routing: #F5A623;
+  --cat-sink: #00B886;
+}

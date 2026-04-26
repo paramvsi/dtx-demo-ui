@@ -1,0 +1,67 @@
+/*
+ * Quantum Mint — biotech / AI-life-sciences mood. Pale mint canvas with
+ * deep mint brand and violet accent. Gradient walks mint → violet.
+ *
+ * Hex values from daitics-launchpad-v4.html line 43 (light mode).
+ */
+[data-theme="quantum-mint"] {
+  --canvas: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F5;
+  --surface-3: #E4E4E7;
+  --sidebar: #052013;
+  --sidebar-elevated: #0A301F;
+  --sidebar-border: #2A2F3A;
+
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --border-focus: #00B886;
+
+  --text: #052013;
+  --text-muted: #2D5A3F;
+  --text-subtle: #6B8E7A;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #C0CCC8;
+
+  --brand: #00786F;                /* darker mint for canvas-safe wordmark */
+  --brand-on-dark: #00D9A0;        /* iconic bright mint on dark sidebar */
+  --brand-accent-1: #00B886;
+  --brand-accent-2: #00D9A0;       /* bright mint */
+  --brand-accent-3: #8B5CF6;       /* violet — gradient end */
+  --brand-deep: #052013;
+  --brand-deep-2: #0A301F;
+
+  --primary: #00B886;
+  --primary-fg: #052013;
+  --primary-hover: #009972;
+  --primary-soft: color-mix(in srgb, #00B886 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #00B886 28%, transparent);
+
+  --ai-signal: #00B886;
+  --ai-glow: color-mix(in srgb, #00B886 32%, transparent);
+
+  --grad-from: #00D9A0;
+  --grad-via: #8B5CF6;
+  --grad-to: #052013;
+
+  --info: #8B5CF6;
+  --info-wash: color-mix(in srgb, #8B5CF6 14%, transparent);
+  --info-fg: #6D28D9;
+  --success: #00B886;
+  --success-wash: color-mix(in srgb, #00B886 14%, transparent);
+  --success-fg: #00785A;
+  --warning: #F59E0B;
+  --warning-wash: color-mix(in srgb, #F59E0B 14%, transparent);
+  --warning-fg: #92400E;
+  --danger: #FF3D71;
+  --danger-wash: color-mix(in srgb, #FF3D71 14%, transparent);
+  --danger-fg: #B91C5F;
+
+  --cat-source: #3B82F6;
+  --cat-transform: #2D5A3F;
+  --cat-dq: #00B886;
+  --cat-privacy: #8B5CF6;
+  --cat-identity: #EC4899;
+  --cat-routing: #F59E0B;
+  --cat-sink: #00D9A0;
+}

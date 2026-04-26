@@ -10,9 +10,9 @@
  * primary-fg on sage primary = 5.0:1 AA pass.
  */
 [data-theme="sage"] {
-  --canvas: #ECF2EE;
+  --canvas: #FAFAFA;
   --surface: #FFFFFF;
-  --surface-2: #DDE7E2;
+  --surface-2: #F4F4F5;
   --sidebar: #DDE7E2;
   --sidebar-elevated: #C8D6CE;
   --sidebar-border: #C0CEC8;
@@ -53,4 +53,18 @@
   --cat-identity: #A855F7;
   --cat-routing: #92580E;
   --cat-sink: #15803D;
+
+  --brand-accent-1: #4A6F58;
+  --brand-accent-2: #3BECB9;
+  --brand-accent-3: #1A5C33;
+  --brand-deep: #1F3A2E;
+  --brand-deep-2: #2D4F35;
+  --grad-from: #1A5C33;
+  --grad-via: #3BECB9;
+  --grad-to: #4A6F58;
+  --primary-soft: color-mix(in srgb, #4A6F58 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #4A6F58 28%, transparent);
+  --ai-signal: #3BECB9;
+  --ai-glow: color-mix(in srgb, #3BECB9 32%, transparent);
+  --surface-3: #E4E4E7;
 }

@@ -10,10 +10,6 @@ export type BrandSurface = 'light' | 'dark';
  *    light surfaces). Use anywhere the glyph sits on TopBar / canvas / cards.
  *  - 'dark' → text-brand-on-dark: iconic saturated mood-board color. Use
  *    when the glyph sits on the dark sidebar.
- *
- * For most themes the two tokens hold the same color; the split exists for
- * Phosphor / Light Teal / Lime Neon where the iconic brand color is too
- * light to pass contrast against a white surface.
  */
 export function BrandGlyph({
   className,
@@ -42,8 +38,9 @@ export function BrandGlyph({
 }
 
 /**
- * Wordmark + glyph. Wordmark uses font-serif (Instrument Serif) — the only
- * place serif appears in the entire app. Hides the wordmark when collapsed.
+ * Wordmark + glyph. On dark sidebars, the glyph is wrapped in a gradient
+ * "brand mark" tile (primary → brand-accent-2) with a soft AI-glow shadow —
+ * matches manager's launchpad-v4 .brand-mark pattern.
  */
 export function Brand({
   collapsed = false,
@@ -55,13 +52,22 @@ export function Brand({
   className?: string;
 }) {
   return (
-    <div className={cn('flex items-center gap-2', className)}>
-      <BrandGlyph surface={surface} />
+    <div className={cn('flex items-center gap-2.5', className)}>
+      {surface === 'dark' ? (
+        <span
+          className="bg-brand-gradient flex h-9 w-9 shrink-0 items-center justify-center rounded-lg shadow-ai-glow"
+          aria-hidden="true"
+        >
+          <BrandGlyph surface="dark" size={18} className="!text-white" />
+        </span>
+      ) : (
+        <BrandGlyph surface="light" />
+      )}
       {!collapsed && (
         <span
           className={cn(
-            'font-serif text-lg leading-none',
-            surface === 'dark' ? 'text-brand-on-dark' : 'text-brand',
+            'font-serif leading-none',
+            surface === 'dark' ? 'text-base font-bold text-sidebar-text' : 'text-lg text-brand',
           )}
         >
           DTX

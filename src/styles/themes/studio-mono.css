@@ -1,0 +1,67 @@
+/*
+ * Studio Mono — design-tool mood. Neutral gray canvas with near-black
+ * brand and magenta + violet accents. Gradient walks black → magenta → violet.
+ *
+ * Hex values from daitics-launchpad-v4.html line 46 (light mode).
+ */
+[data-theme="studio-mono"] {
+  --canvas: #EEEEEF;
+  --surface: #FAFAFA;
+  --surface-2: #E2E2E5;
+  --surface-3: #D0D0D5;
+  --sidebar: #18181B;
+  --sidebar-elevated: #27272A;
+  --sidebar-border: #48484F;
+
+  --border: #C0C0C8;
+  --border-strong: #A0A0AA;
+  --border-focus: #18181B;
+
+  --text: #18181B;
+  --text-muted: #52525B;
+  --text-subtle: #80808A;
+  --sidebar-text: #FAFAFA;
+  --sidebar-text-muted: #C0C0C8;
+
+  --brand: #18181B;
+  --brand-on-dark: #FAFAFA;
+  --brand-accent-1: #18181B;
+  --brand-accent-2: #FF4D8B;       /* magenta — sidebar active bar */
+  --brand-accent-3: #7C5CFF;       /* violet */
+  --brand-deep: #18181B;
+  --brand-deep-2: #27272A;
+
+  --primary: #18181B;
+  --primary-fg: #FAFAFA;
+  --primary-hover: #27272A;
+  --primary-soft: color-mix(in srgb, #18181B 12%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #18181B 20%, transparent);
+
+  --ai-signal: #FF4D8B;
+  --ai-glow: color-mix(in srgb, #FF4D8B 32%, transparent);
+
+  --grad-from: #18181B;
+  --grad-via: #FF4D8B;
+  --grad-to: #7C5CFF;
+
+  --info: #0EA5E9;
+  --info-wash: color-mix(in srgb, #0EA5E9 14%, transparent);
+  --info-fg: #0369A1;
+  --success: #00A878;
+  --success-wash: color-mix(in srgb, #00A878 14%, transparent);
+  --success-fg: #00785A;
+  --warning: #F59E0B;
+  --warning-wash: color-mix(in srgb, #F59E0B 14%, transparent);
+  --warning-fg: #92400E;
+  --danger: #E5484D;
+  --danger-wash: color-mix(in srgb, #E5484D 14%, transparent);
+  --danger-fg: #991B1B;
+
+  --cat-source: #0EA5E9;
+  --cat-transform: #52525B;
+  --cat-dq: #18181B;
+  --cat-privacy: #FF4D8B;
+  --cat-identity: #7C5CFF;
+  --cat-routing: #F59E0B;
+  --cat-sink: #00A878;
+}

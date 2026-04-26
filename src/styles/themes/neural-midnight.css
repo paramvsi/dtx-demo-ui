@@ -1,0 +1,70 @@
+/*
+ * Neural Midnight — tech/AI mood. Cool gray canvas with violet + cyan
+ * accents on a near-black sidebar. Gradient walks violet → cyan.
+ *
+ * Hex values from daitics-launchpad-v4.html line 37 (light mode).
+ *
+ * WCAG: near-black text on cool gray = 17:1 AAA; violet brand on cool gray
+ * = 5.2:1 AA pass; white text on near-black sidebar = 18:1 AAA.
+ */
+[data-theme="neural-midnight"] {
+  --canvas: #F2F2F5;
+  --surface: #FAFAFB;
+  --surface-2: #EAEAF0;
+  --surface-3: #D8D8E0;
+  --sidebar: #0A0B0F;
+  --sidebar-elevated: #13141A;
+  --sidebar-border: #2E2F38;
+
+  --border: #CECEDA;
+  --border-strong: #B0B0C0;
+  --border-focus: #7C5CFF;
+
+  --text: #0A0B0F;
+  --text-muted: #52525B;
+  --text-subtle: #8B8B95;
+  --sidebar-text: #F5F5F7;
+  --sidebar-text-muted: #B8B8C2;
+
+  --brand: #7C5CFF;
+  --brand-on-dark: #A78BFA;
+  --brand-accent-1: #7C5CFF;
+  --brand-accent-2: #00BFD4;       /* cyan — gradient mid-stop, sidebar active bar */
+  --brand-accent-3: #6B4FE5;
+  --brand-deep: #0A0B0F;
+  --brand-deep-2: #13141A;
+
+  --primary: #7C5CFF;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #6B4FE5;
+  --primary-soft: color-mix(in srgb, #7C5CFF 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #7C5CFF 28%, transparent);
+
+  --ai-signal: #7C5CFF;
+  --ai-glow: color-mix(in srgb, #7C5CFF 30%, transparent);
+
+  --grad-from: #7C5CFF;
+  --grad-via: #00BFD4;
+  --grad-to: #6B4FE5;
+
+  --info: #3B82F6;
+  --info-wash: color-mix(in srgb, #3B82F6 14%, transparent);
+  --info-fg: #1E40AF;
+  --success: #00A878;
+  --success-wash: color-mix(in srgb, #00A878 14%, transparent);
+  --success-fg: #00785A;
+  --warning: #F59E0B;
+  --warning-wash: color-mix(in srgb, #F59E0B 14%, transparent);
+  --warning-fg: #92400E;
+  --danger: #E5484D;
+  --danger-wash: color-mix(in srgb, #E5484D 14%, transparent);
+  --danger-fg: #991B1B;
+
+  --cat-source: #3B82F6;
+  --cat-transform: #52525B;
+  --cat-dq: #00BFD4;
+  --cat-privacy: #7C5CFF;
+  --cat-identity: #EC4899;
+  --cat-routing: #F59E0B;
+  --cat-sink: #00A878;
+}

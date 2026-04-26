@@ -1,0 +1,67 @@
+/*
+ * Cobalt Electric — high-energy SaaS. Pale lavender canvas with electric
+ * cobalt brand and lavender + cream accents. Gradient walks cream → lavender → cobalt.
+ *
+ * Hex values from daitics-launchpad-v4.html line 52 (light mode).
+ */
+[data-theme="cobalt-electric"] {
+  --canvas: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F5;
+  --surface-3: #E4E4E7;
+  --sidebar: #00033D;
+  --sidebar-elevated: #0600AB;
+  --sidebar-border: #3535B0;
+
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --border-focus: #0033FF;
+
+  --text: #00033D;
+  --text-muted: #2A2D7A;
+  --text-subtle: #5560A0;
+  --sidebar-text: #F2EEFF;
+  --sidebar-text-muted: #C8C8FF;
+
+  --brand: #0033FF;
+  --brand-on-dark: #977DFF;
+  --brand-accent-1: #0033FF;
+  --brand-accent-2: #977DFF;       /* lavender — sidebar active bar */
+  --brand-accent-3: #F2E6EE;       /* cream — gradient start */
+  --brand-deep: #00033D;
+  --brand-deep-2: #0600AB;
+
+  --primary: #0033FF;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #0028CC;
+  --primary-soft: color-mix(in srgb, #0033FF 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #0033FF 28%, transparent);
+
+  --ai-signal: #0033FF;
+  --ai-glow: color-mix(in srgb, #0033FF 30%, transparent);
+
+  --grad-from: #F2E6EE;
+  --grad-via: #977DFF;
+  --grad-to: #0033FF;
+
+  --info: #0033FF;
+  --info-wash: color-mix(in srgb, #0033FF 14%, transparent);
+  --info-fg: #00285C;
+  --success: #00B886;
+  --success-wash: color-mix(in srgb, #00B886 14%, transparent);
+  --success-fg: #00785A;
+  --warning: #F5A623;
+  --warning-wash: color-mix(in srgb, #F5A623 14%, transparent);
+  --warning-fg: #92580E;
+  --danger: #FF3D71;
+  --danger-wash: color-mix(in srgb, #FF3D71 14%, transparent);
+  --danger-fg: #B91C5F;
+
+  --cat-source: #0033FF;
+  --cat-transform: #2A2D7A;
+  --cat-dq: #00B886;
+  --cat-privacy: #977DFF;
+  --cat-identity: #FF6B9D;
+  --cat-routing: #F5A623;
+  --cat-sink: #00B886;
+}

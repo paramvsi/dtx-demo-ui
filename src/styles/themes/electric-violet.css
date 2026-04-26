@@ -1,0 +1,73 @@
+/*
+ * Electric Violet — manager's default for the modernized launchpad.
+ * Warm cream canvas (#F5F0E6) with electric violet brand (#7B2CFF) and
+ * a 3-stop gradient that walks violet → light violet → hot pink.
+ * AI banner uses this gradient as its hero treatment.
+ *
+ * Hex values verbatim from daitics-launchpad-v4.html line 22 (light mode).
+ *
+ * WCAG: dark plum text on cream = 15.6:1 AAA; violet brand on cream
+ * = 6.8:1 AA pass; white sidebar text on deep plum = 17.2:1 AAA.
+ */
+[data-theme="electric-violet"] {
+  --canvas: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F5;
+  --surface-3: #E4E4E7;
+  --sidebar: #1A0E33;            /* deep plum sidebar — manager's brand-deep */
+  --sidebar-elevated: #251449;
+  --sidebar-border: #322256;
+
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --border-focus: #7B2CFF;
+
+  --text: #1A0E33;
+  --text-muted: #544A6B;
+  --text-subtle: #8B7FA0;
+  --sidebar-text: #F5F0E8;
+  --sidebar-text-muted: #C8BFE0;
+
+  --brand: #7B2CFF;
+  --brand-on-dark: #C77DFF;       /* lighter violet wordmark on deep plum sidebar */
+  --brand-accent-1: #7B2CFF;      /* primary violet */
+  --brand-accent-2: #C77DFF;      /* light lavender — used in gradient mid-stop */
+  --brand-accent-3: #FF6B9D;      /* hot pink — gradient end stop + sidebar active bar */
+  --brand-deep: #1A0E33;
+  --brand-deep-2: #251449;
+
+  --primary: #7B2CFF;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #6920E0;
+  --primary-soft: color-mix(in srgb, #7B2CFF 14%, transparent);
+  --primary-soft-strong: color-mix(in srgb, #7B2CFF 28%, transparent);
+
+  --ai-signal: #7B2CFF;
+  --ai-glow: color-mix(in srgb, #7B2CFF 30%, transparent);
+
+  /* The signature gradient — violet → lavender → hot pink */
+  --grad-from: #7B2CFF;
+  --grad-via: #C77DFF;
+  --grad-to: #FF6B9D;
+
+  --info: #3B82F6;
+  --info-wash: color-mix(in srgb, #3B82F6 14%, transparent);
+  --info-fg: #1E40AF;
+  --success: #00A878;
+  --success-wash: color-mix(in srgb, #00A878 14%, transparent);
+  --success-fg: #00785A;
+  --warning: #F5A623;
+  --warning-wash: color-mix(in srgb, #F5A623 14%, transparent);
+  --warning-fg: #92580E;
+  --danger: #FF3D71;
+  --danger-wash: color-mix(in srgb, #FF3D71 14%, transparent);
+  --danger-fg: #B91C5F;
+
+  --cat-source: #3B82F6;
+  --cat-transform: #544A6B;
+  --cat-dq: #7B2CFF;
+  --cat-privacy: #FF6B9D;
+  --cat-identity: #C77DFF;
+  --cat-routing: #F5A623;
+  --cat-sink: #00A878;
+}

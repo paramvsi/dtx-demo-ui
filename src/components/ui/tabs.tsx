@@ -23,8 +23,13 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      'relative inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-text-muted transition-colors hover:text-text data-[state=active]:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:ring-inset',
-      "data-[state=active]:after:content-[''] data-[state=active]:after:absolute data-[state=active]:after:left-2 data-[state=active]:after:right-2 data-[state=active]:after:-bottom-px data-[state=active]:after:h-[2px] data-[state=active]:after:bg-primary data-[state=active]:after:rounded-full",
+      'relative inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-text-muted rounded-t-md transition-colors',
+      // Hover: soft accent wash + accent text — visible without being heavy
+      'hover:bg-primary-soft hover:text-primary',
+      // Active: brand-accent-2 underline (theme-driven), accent text
+      'data-[state=active]:text-primary',
+      "data-[state=active]:after:content-[''] data-[state=active]:after:absolute data-[state=active]:after:left-2 data-[state=active]:after:right-2 data-[state=active]:after:-bottom-px data-[state=active]:after:h-[2px] data-[state=active]:after:bg-brand-accent-2 data-[state=active]:after:rounded-full",
+      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:ring-inset',
       className,
     )}
     {...props}
