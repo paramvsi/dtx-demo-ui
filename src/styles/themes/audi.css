@@ -1,0 +1,53 @@
+/*
+ * Audi — premium auto palette: Audi red brand with metallic silver chrome.
+ * Source palette: #BB0A30 + #C0C0C0.
+ * Sidebar uses near-black (Audi-livery dark) rather than literal silver, since
+ * a silver sidebar would conflict with the white surfaces; silver instead
+ * shows up as the surface-2 / hover state.
+ * WCAG: red on white = 6.6:1 AA pass; white on near-black sidebar = 18:1 AAA.
+ */
+[data-theme="audi"] {
+  --canvas: #F5F5F5;
+  --surface: #FFFFFF;
+  --surface-2: #E8E8E8;
+  --sidebar: #1A1A1A;
+  --sidebar-elevated: #2A2A2A;
+  --sidebar-border: #0F0F0F;
+
+  --border: #D8D8D8;
+  --border-strong: #B8B8B8;
+  --border-focus: #BB0A30;
+
+  --text: #0F0F0F;
+  --text-muted: #4A4A4A;
+  --text-subtle: #8A8A8A;
+  --sidebar-text: #F5F5F5;
+  --sidebar-text-muted: #C0C0C0;
+
+  --brand: #BB0A30;
+  --brand-on-dark: #C0C0C0; /* Audi metallic silver wordmark on near-black sidebar — actual Audi brand DNA (9.5:1 AAA). Red was 2.6:1 fail. */
+  --primary: #1A1A1A;
+  --primary-fg: #F5F5F5;
+  --primary-hover: #2A2A2A;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92400E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #BB0A30;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #2563EB;
+  --cat-transform: #4A4A4A;
+  --cat-dq: #15803D;
+  --cat-privacy: #BB0A30;
+  --cat-identity: #92400E;
+  --cat-routing: #92400E;
+  --cat-sink: #15803D;
+}

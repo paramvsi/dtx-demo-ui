@@ -83,6 +83,17 @@
 @import "./themes/light-teal.css";
 @import "./themes/lime-neon.css";
 @import "./themes/purple-orange.css";
+@import "./themes/xanthous.css";
+@import "./themes/tricolor.css";
+@import "./themes/royal-purple.css";
+@import "./themes/burgundy.css";
+@import "./themes/cherry-cola.css";
+@import "./themes/scuderia.css";
+@import "./themes/audi.css";
+@import "./themes/juniper.css";
+@import "./themes/vesper.css";
+@import "./themes/electric-purple.css";
+@import "./themes/indigo-butter.css";
 
 /*
  * Global color transition — the only place a wildcard selector is acceptable.

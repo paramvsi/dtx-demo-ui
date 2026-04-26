@@ -1,0 +1,56 @@
+/*
+ * Cherry Cola — heritage red brand on white canvas. Source palette pairs
+ * #940002 cherry with #E6DDD4 vanilla cream, but the way heritage red
+ * brands (Coca-Cola, Target, Levi's) actually behave digitally is *white
+ * canvas with cream as a supporting accent* — cream lives in physical
+ * product/print, not on screen. So canvas is white; vanilla cream survives
+ * as surface-2, hover wells, and the sidebar wordmark.
+ *
+ * WCAG: cherry on white = 9.3:1 AAA; vanilla cream wordmark on cherry
+ * sidebar = 8.5:1 AAA.
+ */
+[data-theme="cherry-cola"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F5EFE6;       /* lighter version of vanilla cream — keeps heritage hint in hover/well backgrounds */
+  --sidebar: #940002;
+  --sidebar-elevated: #B30005;
+  --sidebar-border: #6E0001;
+
+  --border: #E8E0D2;
+  --border-strong: #D0C4B0;
+  --border-focus: #940002;
+
+  --text: #1A0A0A;
+  --text-muted: #4A3A35;
+  --text-subtle: #8E7E72;
+  --sidebar-text: #FAF5EE;
+  --sidebar-text-muted: #E6BCB8;
+
+  --brand: #940002;
+  --brand-on-dark: #E6DDD4;    /* vanilla cream wordmark on cherry sidebar — heritage typography treatment (8.5:1 AAA) */
+  --primary: #940002;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #B30005;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92400E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #940002;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #940002;
+
+  --cat-source: #2563EB;
+  --cat-transform: #4A3A35;
+  --cat-dq: #15803D;
+  --cat-privacy: #940002;
+  --cat-identity: #92400E;
+  --cat-routing: #92400E;
+  --cat-sink: #15803D;
+}

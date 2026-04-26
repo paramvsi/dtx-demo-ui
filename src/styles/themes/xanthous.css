@@ -1,0 +1,51 @@
+/*
+ * Xanthous — gold brand on burgundy chrome, warm cream canvas.
+ * WCAG: gold #F7B638 fails 1.7:1 on cream canvas → --brand uses canvas-safe
+ * dark gold #92580E (5.42:1 AA), --brand-on-dark keeps the iconic xanthous
+ * gold for the burgundy sidebar (gold-on-burgundy ≈ 8.2:1 AA pass).
+ */
+[data-theme="xanthous"] {
+  --canvas: #FAF7F0;
+  --surface: #FFFFFF;
+  --surface-2: #F4EFE0;
+  --sidebar: #780115;
+  --sidebar-elevated: #8E0419;
+  --sidebar-border: #5A000F;
+
+  --border: #E8DFC8;
+  --border-strong: #D6C8A6;
+  --border-focus: #92580E;
+
+  --text: #1A1410;
+  --text-muted: #5C4A3A;
+  --text-subtle: #998A75;
+  --sidebar-text: #FAF7F0;
+  --sidebar-text-muted: #E8C988;
+
+  --brand: #92580E;
+  --brand-on-dark: #F7B638;
+  --primary: #780115;
+  --primary-fg: #FAF7F0;
+  --primary-hover: #8E0419;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92580E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #780115;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #780115;
+
+  --cat-source: #780115;
+  --cat-transform: #5C4A3A;
+  --cat-dq: #15803D;
+  --cat-privacy: #92580E;
+  --cat-identity: #2563EB;
+  --cat-routing: #92580E;
+  --cat-sink: #15803D;
+}

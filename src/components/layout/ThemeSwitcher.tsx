@@ -59,44 +59,51 @@ export function ThemeSwitcher() {
         <TooltipContent side="bottom">Theme · {active.name}</TooltipContent>
       </Tooltip>
 
-      <DropdownMenuContent align="end" className="min-w-[18rem] p-2">
-        <DropdownMenuLabel>Color theme</DropdownMenuLabel>
+      <DropdownMenuContent align="end" className="min-w-[20rem] p-2">
+        <DropdownMenuLabel className="flex items-center justify-between">
+          <span>Color theme</span>
+          <span className="font-mono text-[9px] normal-case tracking-wider text-text-subtle">
+            {THEMES.length} themes
+          </span>
+        </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        {THEMES.map((t) => {
-          const isActive = t.id === theme;
-          return (
-            <DropdownMenuItem
-              key={t.id}
-              onSelect={() => setTheme(t.id as ThemeId)}
-              className="flex flex-col items-start gap-1.5 px-2.5 py-2"
-            >
-              <div className="flex w-full items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="font-serif text-base leading-none">{t.name}</span>
+        <div className="max-h-[min(70vh,32rem)] overflow-y-auto scroll-smooth pr-0.5 [scrollbar-width:thin] [scrollbar-color:var(--color-border-strong)_transparent]">
+          {THEMES.map((t) => {
+            const isActive = t.id === theme;
+            return (
+              <DropdownMenuItem
+                key={t.id}
+                onSelect={() => setTheme(t.id as ThemeId)}
+                className="flex flex-col items-start gap-1.5 px-2.5 py-2"
+              >
+                <div className="flex w-full items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="font-serif text-base leading-none">{t.name}</span>
+                  </div>
+                  {isActive && <Check className="h-3.5 w-3.5 text-text-muted" />}
                 </div>
-                {isActive && <Check className="h-3.5 w-3.5 text-text-muted" />}
-              </div>
-              <div className="flex w-full items-center gap-2">
-                <div className="flex gap-0.5 overflow-hidden rounded-sm border border-border">
-                  {t.swatches.map((c, i) => (
-                    <span
-                      key={i}
-                      aria-hidden="true"
-                      style={{ backgroundColor: c }}
-                      className="block h-4 w-4"
-                    />
-                  ))}
+                <div className="flex w-full items-center gap-2">
+                  <div className="flex gap-0.5 overflow-hidden rounded-sm border border-border">
+                    {t.swatches.map((c, i) => (
+                      <span
+                        key={i}
+                        aria-hidden="true"
+                        style={{ backgroundColor: c }}
+                        className="block h-4 w-4"
+                      />
+                    ))}
+                  </div>
+                  <span className={cn('text-xs italic text-text-subtle line-clamp-1', isActive && 'text-text-muted')}>
+                    {t.description}
+                  </span>
                 </div>
-                <span className={cn('text-xs italic text-text-subtle', isActive && 'text-text-muted')}>
-                  {t.description}
-                </span>
-              </div>
-            </DropdownMenuItem>
-          );
-        })}
+              </DropdownMenuItem>
+            );
+          })}
+        </div>
         <DropdownMenuSeparator />
         <div className="px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-text-subtle">
-          ⇧⌘T cycles
+          ⇧⌘T cycles · scroll for more
         </div>
       </DropdownMenuContent>
     </DropdownMenu>

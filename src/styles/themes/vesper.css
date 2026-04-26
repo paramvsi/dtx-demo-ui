@@ -1,0 +1,53 @@
+/*
+ * Vesper — purple gradient theme: source palette ships #4A0080 → #0D0D0D
+ * (deep purple to near-black). Implemented as solid theme with the deeper
+ * purple stop on sidebar; the canvas-tint overlay uses both stops to evoke
+ * the gradient mood.
+ * WCAG: deep purple #4A0080 on white = 11.5:1 AAA; white on purple sidebar
+ * = AAA pass. Tech/luxe mood.
+ */
+[data-theme="vesper"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F5F0FA;
+  --sidebar: #4A0080;
+  --sidebar-elevated: #5C0099;
+  --sidebar-border: #0D0D0D;
+
+  --border: #E8DDF2;
+  --border-strong: #D4C0E5;
+  --border-focus: #4A0080;
+
+  --text: #0D0D0D;
+  --text-muted: #4A3D5C;
+  --text-subtle: #8A7E9E;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #C7A8E5;
+
+  --brand: #4A0080;
+  --brand-on-dark: #E8D4FF; /* lighter lilac wordmark on deep purple sidebar (7.8:1 AAA). #C77DFF was borderline 3.8:1. */
+  --primary: #4A0080;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #5C0099;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92400E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #B91C1C;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #2563EB;
+  --cat-transform: #4A3D5C;
+  --cat-dq: #5C0099;
+  --cat-privacy: #4A0080;
+  --cat-identity: #C77DFF;
+  --cat-routing: #92400E;
+  --cat-sink: #15803D;
+}

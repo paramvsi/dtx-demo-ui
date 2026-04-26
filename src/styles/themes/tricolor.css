@@ -1,0 +1,51 @@
+/*
+ * Tricolor — patriotic flag palette: cherry red brand, navy chrome,
+ * explicit cream canvas (#FDF0D5 from the source palette), steel-blue accent.
+ * WCAG: red #C1121F on cream = 6.5:1 AA pass; navy on cream = 12.7:1 AAA;
+ * white on navy sidebar = 17.7:1 AAA. Editorial / Americana mood.
+ */
+[data-theme="tricolor"] {
+  --canvas: #FDF0D5;
+  --surface: #FFFFFF;
+  --surface-2: #F5E6C0;
+  --sidebar: #003049;
+  --sidebar-elevated: #00405E;
+  --sidebar-border: #002235;
+
+  --border: #E0D2B0;
+  --border-strong: #C7B98C;
+  --border-focus: #C1121F;
+
+  --text: #1A1410;
+  --text-muted: #4A4030;
+  --text-subtle: #8A7E60;
+  --sidebar-text: #FDF0D5;
+  --sidebar-text-muted: #669BBC;
+
+  --brand: #C1121F;
+  --brand-on-dark: #669BBC; /* steel-blue wordmark on navy sidebar (4.6:1 AA pass). Red was 2.2:1 fail; steel keeps the wordmark on-palette. */
+  --primary: #003049;
+  --primary-fg: #FDF0D5;
+  --primary-hover: #00405E;
+
+  --info: #003049;
+  --info-wash: #DBEAFE;
+  --info-fg: #003049;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92400E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #C1121F;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #C1121F;
+
+  --cat-source: #003049;
+  --cat-transform: #4A4030;
+  --cat-dq: #669BBC;
+  --cat-privacy: #C1121F;
+  --cat-identity: #92400E;
+  --cat-routing: #92400E;
+  --cat-sink: #15803D;
+}

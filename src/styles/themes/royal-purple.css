@@ -1,0 +1,52 @@
+/*
+ * Royal Purple — monochromatic purple ramp from the source palette
+ * (#5A189A → #7B2CBF → #9D4EDD → #C77DFF). Sidebar uses the deepest stop,
+ * accents step down through the ramp.
+ * WCAG: deep purple on white = 10.3:1 AAA; white on deep-purple sidebar
+ * passes AAA. Lighter purples relegated to accents/categoricals.
+ */
+[data-theme="royal-purple"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F5F0FA;
+  --sidebar: #5A189A;
+  --sidebar-elevated: #7B2CBF;
+  --sidebar-border: #4A0E80;
+
+  --border: #E8DDF2;
+  --border-strong: #D4C0E5;
+  --border-focus: #5A189A;
+
+  --text: #1A0A2E;
+  --text-muted: #5A4A6E;
+  --text-subtle: #9A8AAE;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #C77DFF;
+
+  --brand: #5A189A;
+  --brand-on-dark: #E8D4FF; /* lighter lilac wordmark on deep purple sidebar (7.5:1 AAA). #C77DFF was borderline 3.8:1 — too close to sidebar. */
+  --primary: #5A189A;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #7B2CBF;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92400E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #B91C1C;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #2563EB;
+  --cat-transform: #5A4A6E;
+  --cat-dq: #7B2CBF;
+  --cat-privacy: #5A189A;
+  --cat-identity: #9D4EDD;
+  --cat-routing: #92400E;
+  --cat-sink: #15803D;
+}

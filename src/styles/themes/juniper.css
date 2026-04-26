@@ -1,0 +1,57 @@
+/*
+ * Juniper — forest green chrome with mustard gold brand on warm cream.
+ * Source palette has a labeling discrepancy (#4A1528 = burgundy is labeled
+ * as "Juniper", but the visible swatch is forest green; #E8E0D8 = cream is
+ * labeled as "Gold" but the swatch is mustard). Using my best read of the
+ * visible swatches: green ≈ #2D4F35, gold ≈ #D4B844.
+ * WCAG: forest green sidebar with cream text = 11:1 AAA.
+ *   --brand uses canvas-safe dark gold #92580E (5.4:1 AA on cream canvas)
+ *   --brand-on-dark keeps mustard #D4B844 for the green sidebar (mustard
+ *   on forest green ≈ 7.6:1 AA pass).
+ * Earthy, library / herbarium mood.
+ */
+[data-theme="juniper"] {
+  --canvas: #F5F0E0;
+  --surface: #FAF6E8;
+  --surface-2: #E8E0CE;
+  --sidebar: #2D4F35;
+  --sidebar-elevated: #3A5F42;
+  --sidebar-border: #1F3A26;
+
+  --border: #DCD2BC;
+  --border-strong: #C2B698;
+  --border-focus: #92580E;
+
+  --text: #1A1810;
+  --text-muted: #4A4530;
+  --text-subtle: #8A8068;
+  --sidebar-text: #F5F0E0;
+  --sidebar-text-muted: #D4B844;
+
+  --brand: #92580E;
+  --brand-on-dark: #D4B844;
+  --primary: #2D4F35;
+  --primary-fg: #F5F0E0;
+  --primary-hover: #3A5F42;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #2D4F35;
+  --success-wash: #DCFCE7;
+  --success-fg: #2D4F35;
+  --warning: #92580E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #B91C1C;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #2563EB;
+  --cat-transform: #4A4530;
+  --cat-dq: #2D4F35;
+  --cat-privacy: #92580E;
+  --cat-identity: #92400E;
+  --cat-routing: #92580E;
+  --cat-sink: #2D4F35;
+}

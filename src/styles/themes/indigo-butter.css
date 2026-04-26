@@ -1,0 +1,54 @@
+/*
+ * Indigo Butter — bold complementary palette: deep indigo chrome with
+ * butter yellow as the iconic accent. Source: #200A5E + #FFE566.
+ * WCAG: butter #FFE566 on white = 1.26:1 catastrophic fail. Resolution:
+ *   --brand uses indigo #200A5E as the wordmark color (15.6:1 AAA on cream)
+ *   --brand-on-dark keeps butter for the indigo sidebar (13.1:1 AAA pass)
+ * Canvas is warm cream #FBF8E8 to harmonize the indigo+butter complementary
+ * pair without losing legibility.
+ */
+[data-theme="indigo-butter"] {
+  --canvas: #FFFFFF;             /* cool white — the indigo+butter complementary pop is stronger on white than cream */
+  --surface: #FFFFFF;
+  --surface-2: #F5F5F8;
+  --sidebar: #200A5E;
+  --sidebar-elevated: #2E1078;
+  --sidebar-border: #14063D;
+
+  --border: #E5E5EC;
+  --border-strong: #C8C8D4;
+  --border-focus: #200A5E;
+
+  --text: #14063D;
+  --text-muted: #4A4555;
+  --text-subtle: #8A86A0;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #FFE566;
+
+  --brand: #200A5E;
+  --brand-on-dark: #FFE566;
+  --primary: #200A5E;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #2E1078;
+
+  --info: #2563EB;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #15803D;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #92580E;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #78350F;
+  --danger: #B91C1C;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #2563EB;
+  --cat-transform: #4A4030;
+  --cat-dq: #15803D;
+  --cat-privacy: #200A5E;
+  --cat-identity: #2E1078;
+  --cat-routing: #92580E;
+  --cat-sink: #15803D;
+}
