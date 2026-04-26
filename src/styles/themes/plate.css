@@ -19,9 +19,10 @@
   --text-muted: #57534E;
   --text-subtle: #A8A29E;
   --sidebar-text: #FAFAF7;
-  --sidebar-text-muted: #A1A1AA;
+  --sidebar-text-muted: #D4D4D8; /* bumped from #A1A1AA — was 4.0:1, now 6.9:1 AA pass on dark zinc sidebar */
 
   --brand: #B45309;
+  --brand-on-dark: #B45309;
   --primary: #3F3F46;
   --primary-fg: #FAFAF7;
   --primary-hover: #52525B;

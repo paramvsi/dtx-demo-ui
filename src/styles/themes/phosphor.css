@@ -13,7 +13,7 @@
 
   --border: #E4E4E7;
   --border-strong: #D4D4D8;
-  --border-focus: #22C55E;
+  --border-focus: #15803D; /* darker green for AA-pass focus ring on canvas (was #22C55E, 2.26:1 fail → now 5.05:1 AA) */
 
   --text: #0A0A0A;
   --text-muted: #52525B;
@@ -21,7 +21,8 @@
   --sidebar-text: #FAFAF9;
   --sidebar-text-muted: #71717A;
 
-  --brand: #22C55E;
+  --brand: #15803D;        /* canvas-safe (5.05:1 AA on light surfaces) */
+  --brand-on-dark: #22C55E; /* iconic electric green for dark sidebar/cards */
   --primary: #09090B;
   --primary-fg: #FAFAF9;
   --primary-hover: #18181B;

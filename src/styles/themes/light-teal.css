@@ -15,7 +15,7 @@
 
   --border: #D5D9E1;
   --border-strong: #B9BFC7;
-  --border-focus: #3BECB9;
+  --border-focus: #047857; /* darker emerald for AA focus ring (was mint #3BECB9, 1.51:1 fail → now 5.5:1 AA) */
 
   --text: #1B1B1B;
   --text-muted: #5E6366;
@@ -23,7 +23,8 @@
   --sidebar-text: #FFFFFF;
   --sidebar-text-muted: #9FA5AD;
 
-  --brand: #3BECB9;
+  --brand: #047857;        /* canvas-safe emerald (5.5:1 AA on white). Reads as dark-green-with-mint-character. */
+  --brand-on-dark: #3BECB9; /* iconic mint preserved for dark sidebar / brand glyph in sidebar */
   --primary: #141414;
   --primary-fg: #FFFFFF;
   --primary-hover: #222222;

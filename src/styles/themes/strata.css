@@ -22,7 +22,8 @@
   --sidebar-text: #FFFFFF;
   --sidebar-text-muted: #94A3B8;
 
-  --brand: #FF3621;        /* WORDMARK ONLY */
+  --brand: #FF3621;        /* WORDMARK ONLY — passes 3:1 Large on canvas */
+  --brand-on-dark: #FF3621; /* same — orange reads well on dark sidebar */
   --primary: #0E2A3A;      /* same as sidebar — the unified-brand move */
   --primary-fg: #FFFFFF;
   --primary-hover: #1B3A4B;

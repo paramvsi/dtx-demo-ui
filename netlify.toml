@@ -1,0 +1,14 @@
+# Netlify build + SPA-routing config for the DTX demo.
+# The _redirects file in public/ does the same job at runtime; this file
+# documents the intent and pins the build command/output dir.
+
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+# SPA fallback — every unknown path serves index.html so React Router can
+# resolve it client-side. Without this, deep links like /synthetic-data 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

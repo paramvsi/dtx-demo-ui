@@ -20,7 +20,7 @@
 
   --border: #D5D9E1;
   --border-strong: #B9BFC7;
-  --border-focus: #A3E635;
+  --border-focus: #4D7C0F; /* darker lime for AA focus ring (was chartreuse #A3E635, 1.50:1 fail → now 4.93:1 AA) */
 
   --text: #171717;
   --text-muted: #4B4B50;
@@ -28,7 +28,8 @@
   --sidebar-text: #FFFFFF;
   --sidebar-text-muted: #9FA5AD;
 
-  --brand: #A3E635;
+  --brand: #4D7C0F;        /* canvas-safe lime (4.93:1 AA on white). Reads olive-leaning but compliant. */
+  --brand-on-dark: #A3E635; /* iconic chartreuse preserved for dark sidebar / brand glyph in sidebar */
   --primary: #171717;
   --primary-fg: #FFFFFF;
   --primary-hover: #212121;

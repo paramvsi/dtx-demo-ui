@@ -20,7 +20,7 @@ export function Sidebar() {
       className="relative flex shrink-0 flex-col border-r border-sidebar-border bg-sidebar text-sidebar-text"
     >
       <div className={cn('flex h-14 items-center px-4', collapsed && 'justify-center px-0')}>
-        <Brand collapsed={collapsed} />
+        <Brand collapsed={collapsed} surface="dark" />
       </div>
 
       <nav className="flex-1 overflow-y-auto scroll-smooth px-2 py-2">

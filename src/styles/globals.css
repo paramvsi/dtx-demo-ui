@@ -38,8 +38,14 @@
   --color-sidebar-text: var(--sidebar-text);
   --color-sidebar-text-muted: var(--sidebar-text-muted);
 
-  /* Brand */
+  /* Brand
+     ─ --color-brand        canvas-safe variant (passes WCAG on light surfaces)
+     ─ --color-brand-on-dark iconic saturated variant (for use on dark sidebar/cards)
+     For most themes both tokens hold the same color. The split exists so themes
+     with very-light brand colors (mint, lime, electric green) can stay legible
+     on the white TopBar while keeping the bright accent on dark surfaces. */
   --color-brand: var(--brand);
+  --color-brand-on-dark: var(--brand-on-dark);
 
   /* Functional */
   --color-primary: var(--primary);
