@@ -1,0 +1,51 @@
+/*
+ * Purple Orange — Theme 04.
+ * Dual-primary palette: deep purple (#691E74) as the sidebar/primary
+ * surface, vibrant orange (#E34B31) as the brand wordmark and CTA accent.
+ * Mood board confirms purple as the dominant chrome color and orange
+ * exclusively on hero CTAs and brand marks.
+ */
+[data-theme="purple-orange"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F3F4F8;
+  --sidebar: #691E74;
+  --sidebar-elevated: #7C2A88;
+  --sidebar-border: #7C2A88;
+
+  --border: #D5D9E1;
+  --border-strong: #B9BFC7;
+  --border-focus: #E34B31;
+
+  --text: #0D0D0D;
+  --text-muted: #454949;
+  --text-subtle: #9FA5AD;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #C9B8CD;
+
+  --brand: #E34B31;
+  --primary: #691E74;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #7C2A88;
+
+  --info: #04A1BC;
+  --info-wash: #CFFAFE;
+  --info-fg: #155E75;
+  --success: #71D732;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #E34B31;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #92400E;
+  --danger: #E34B31;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #04A1BC;
+  --cat-transform: #454949;
+  --cat-dq: #6980FF;
+  --cat-privacy: #691E74;
+  --cat-identity: #A373FF;
+  --cat-routing: #E34B31;
+  --cat-sink: #71D732;
+}

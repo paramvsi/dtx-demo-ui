@@ -1,0 +1,51 @@
+/*
+ * Light Teal — Theme 02.
+ * Mint primary brand (#3BECB9) on a pure-black sidebar — the "Apple Watch
+ * with mint accents" mood. Black is the unified UI primary; mint shows up
+ * in the wordmark, focus rings, and as the success token (the mood board's
+ * positive/affirmative color).
+ */
+[data-theme="light-teal"] {
+  --canvas: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F3F4F8;
+  --sidebar: #141414;
+  --sidebar-elevated: #222222;
+  --sidebar-border: #222222;
+
+  --border: #D5D9E1;
+  --border-strong: #B9BFC7;
+  --border-focus: #3BECB9;
+
+  --text: #1B1B1B;
+  --text-muted: #5E6366;
+  --text-subtle: #9FA5AD;
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-muted: #9FA5AD;
+
+  --brand: #3BECB9;
+  --primary: #141414;
+  --primary-fg: #FFFFFF;
+  --primary-hover: #222222;
+
+  --info: #6090FD;
+  --info-wash: #DBEAFE;
+  --info-fg: #1E40AF;
+  --success: #1A5C33;
+  --success-wash: #DCFCE7;
+  --success-fg: #15803D;
+  --warning: #F59E0B;
+  --warning-wash: #FEF3C7;
+  --warning-fg: #92400E;
+  --danger: #FF7D78;
+  --danger-wash: #FEE2E2;
+  --danger-fg: #991B1B;
+
+  --cat-source: #6090FD;
+  --cat-transform: #5E6366;
+  --cat-dq: #3BECB9;
+  --cat-privacy: #A373FF;
+  --cat-identity: #FF7D78;
+  --cat-routing: #F59E0B;
+  --cat-sink: #1A5C33;
+}

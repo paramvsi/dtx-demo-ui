@@ -73,6 +73,10 @@
 @import "./themes/slate.css";
 @import "./themes/phosphor.css";
 @import "./themes/plate.css";
+@import "./themes/blue.css";
+@import "./themes/light-teal.css";
+@import "./themes/lime-neon.css";
+@import "./themes/purple-orange.css";
 
 /*
  * Global color transition — the only place a wildcard selector is acceptable.
